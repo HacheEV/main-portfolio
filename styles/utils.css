@@ -1,11 +1,16 @@
 .green-line{
     border-left: 6px solid #519872 ;
     margin-left: 4rem;
-    width: 20%;
     height: 40%;
 }
 
 .navbar-link:hover{
     border-bottom: 8px solid #519872;
     transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .green-line {
+        margin-left: 2rem;
+    }
 }

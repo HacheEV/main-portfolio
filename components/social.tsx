@@ -7,7 +7,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 export const Social = () => {
     // TODO: CHECK IF FINALLY THE ASIDE NAVBAR IS STICKY
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col ml-4 md:ml-12">
             <a href="#" className="mt-3">
                 <FontAwesomeIcon className="text-accent-green text-4xl hover:translate-x-2 transition duration-300" icon={faGithub} />
             </a>
