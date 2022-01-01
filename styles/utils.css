@@ -1,17 +1,10 @@
 .green-line{
-    position: absolute;
-    right: 0px;
     border-left: 6px solid #519872 ;
-    margin-left: 6px;
-    width: 60%;
+    margin-left: 3.75rem;
+    width: 20%;
     height: 40%;
 }
-.icons{
-    position: absolute;
-    top: 20rem;
-    left: 2.5rem;
-    width: 70%;
-}
+
 .navbar-link:hover{
     border-bottom: 8px solid #519872;
     transition: 0.4s;
