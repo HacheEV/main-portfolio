@@ -20,6 +20,7 @@ enum Color {
 export const Navbar = () => {
     const [enabled, setEnabled] = useState<boolean>(false)
     const [dark, setDark] = useState<boolean>(true)
+    const [open, setOpen] = useState<boolean>(false)
     const [color, setColor] = useState<Color>(Color.GREEN)
 
     const handleDark = () => {
@@ -31,6 +32,7 @@ export const Navbar = () => {
     }
     const handleColor = (color:Color) => {
         setColor(color)
+        setOpen(false)
     }
 
     return (
@@ -57,7 +59,7 @@ export const Navbar = () => {
                     <Switch
                         checked={enabled}
                         onChange={setEnabled}
-                        className='bg-light-primary mx-2 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200'
+                        className='bg-dark-third mx-2 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200'
 
                     >
                         <span className="sr-only">Use setting</span>
@@ -103,10 +105,10 @@ export const Navbar = () => {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel className="absolute z-10 left-0 transform -translate-x-1/2 mt-3 px-2 w-26 max-w-xs sm:px-0">
+                                <Popover.Panel className="absolute z-10 left-0 transform -translate-x-1/2 mt-3 px-2 w-24 max-w-xs sm:px-0">
                                     <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                        <div className="relative grid gap-6 bg-dark-secondary px-5 py-6 sm:gap-8 sm:p-8">
-                                            <p className="text-sm text-white">Color tema</p>
+                                        <div className="relative flex flex-col content-center bg-dark-secondary px-5 py-6 sm:gap-8 sm:p-8">
+                                            <p className="text-sm text-white">Tema</p>
                                             <button onClick={() => handleColor(Color.GREEN)}><div className="w-8 h-8 bg-accent-green  rounded-full"></div></button>
                                             <button onClick={() => handleColor(Color.PINK)} ><div className="w-8 h-8 bg-accent-pink   rounded-full"></div></button>
                                             <button  onClick={() => handleColor(Color.RED)} ><div className="w-8 h-8 bg-accent-red  rounded-full"></div></button>
