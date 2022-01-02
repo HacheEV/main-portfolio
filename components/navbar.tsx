@@ -6,8 +6,10 @@ import {classNames} from "../utils/utils";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faMoon} from '@fortawesome/free-solid-svg-icons'
 import {faCog} from '@fortawesome/free-solid-svg-icons'
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import {faTimes} from '@fortawesome/free-solid-svg-icons'
+import {faBars} from '@fortawesome/free-solid-svg-icons'
+import {Fragment} from 'react'
+import {Popover, Transition} from '@headlessui/react'
 
 
 enum Color {
@@ -17,42 +19,82 @@ enum Color {
     RED = 'red',
 }
 
+enum Language {
+    ESP = 'spanish',
+    EN = 'english'
+}
+
 export const Navbar = () => {
     const [enabled, setEnabled] = useState<boolean>(false)
+    const [menu, setMenu] = useState<boolean>(false)
     const [dark, setDark] = useState<boolean>(true)
     const [open, setOpen] = useState<boolean>(false)
     const [color, setColor] = useState<Color>(Color.GREEN)
 
     const handleDark = () => {
-        if(dark){
+        if (dark) {
             setDark(false)
-        }else{
+        } else {
             setDark(true)
         }
     }
-    const handleColor = (color:Color) => {
+    const handleColor = (color: Color) => {
         setColor(color)
         setOpen(false)
+    }
+    const handleMenu = () => {
+        if (menu) {
+            setMenu(false)
+        } else {
+            setMenu(true)
+        }
     }
 
     return (
         <nav className="flex justify-between font-Montserrat text-white text-3xl">
             <div className="flex">
-                <div className="m-2 h-auto">
+                <div className="mt-4 ml-2 mr-3">
                     <Image src={darkLogo} width={125} height={100}/>
                 </div>
-                <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
-                    <a href="#"> Skills</a>
+                <div className="hidden md:flex inline">
+                    <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
+                        <a href="#"> Skills</a>
+                    </div>
+                    <div className="mt-10 mr-4 py-2 h-14 navbar-link">
+                        <a href="#"> Work</a>
+                    </div>
+                    <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
+                        <a href="#"> Contact</a>
+                    </div>
                 </div>
-                <div className="mt-10 mr-4 py-2 h-14 navbar-link">
-                    <a href="#"> Work</a>
-                </div>
-                <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
-                    <a href="#"> Contact</a>
-                </div>
+                {/* RESPONSIVE MENU */}
+                { !menu ? (
+                        <div className="relative h-10 w-6 mt-1 -mr-2">
+                    <div
+                        className="absolute flex flex-col place-content-evenly  z-10 left-0 transform -translate-x-[55%] translate-y-[6.75rem] mt-3 px-2 w-60">
+                        <div
+                            className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            <div
+                                className="relative flex flex-col content-center bg-dark-secondary h-[20.25rem] px-5 py-6 gap-2">
+                                <div className="py-2 h-14 navbar-link ">
+                                    <a href="#"> Skills</a>
+                                </div>
+                                <div className="mt-10 mr-4 py-2 h-14 navbar-link">
+                                    <a href="#"> Work</a>
+                                </div>
+                                <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
+                                    <a href="#"> Contact</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                ) : (null)
+                }
+
 
             </div>
-            <div className="flex justify-evenly items-center  pt-2 ">
+            <div className="mr-5 md:flex justify-evenly items-center  pt-2 ">
                 {/* LANGUAGE SWITCHER*/}
                 <div className="flex justify-evenly items-center text-sm border-accent-green h-14">
                     <p>ESP</p>
@@ -73,54 +115,87 @@ export const Navbar = () => {
                     </Switch>
                     <p>EN</p>
                 </div>
-                {/* DARK MODE SWITCHER*/}
-                <button
-                    onClick={handleDark}
-                    className="mx-3 text-lg"
-                >
-                    <div className="flex items-center">
-                        {dark ?     <FontAwesomeIcon
-                            className="text-light-primary" icon={faMoon} /> : <FontAwesomeIcon
-                            className="text-dark-primary" icon={faMoon} />}
-
-                    </div>
-
-                </button>
-                <Popover className="relative ml-0.5 mr-6">
-                    {({ open }) => (
-                        <>
-                            <Popover.Button
-                                className='group rounded-md inline-flex items-center text-base '
+                <div className="flex justify-evenly items-baseline w-28">
+                {/* HAMBURGER*/}
+                    {
+                        menu ? (<button
+                                onClick={() => handleMenu()}
                             >
                                 <FontAwesomeIcon
-                                    className="text-light-primary text-xl" icon={faCog} />
-                            </Popover.Button>
+                                    className="display-block text-white text-2xl h-6 w-6 mr-2 md:hidden" icon={faBars}/>
+                            </button>
 
-                            <Transition
-                                as={Fragment}
-                                enter="transition ease-out duration-200"
-                                enterFrom="opacity-0 translate-y-1"
-                                enterTo="opacity-100 translate-y-0"
-                                leave="transition ease-in duration-150"
-                                leaveFrom="opacity-100 translate-y-0"
-                                leaveTo="opacity-0 translate-y-1"
-                            >
-                                <Popover.Panel className="absolute z-10 left-0 transform -translate-x-1/2 mt-3 px-2 w-24 max-w-xs sm:px-0">
-                                    <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                        <div className="relative flex flex-col content-center bg-dark-secondary px-5 py-6 sm:gap-8 sm:p-8">
-                                            <p className="text-sm text-white">Tema</p>
-                                            <button onClick={() => handleColor(Color.GREEN)}><div className="w-8 h-8 bg-accent-green  rounded-full"></div></button>
-                                            <button onClick={() => handleColor(Color.PINK)} ><div className="w-8 h-8 bg-accent-pink   rounded-full"></div></button>
-                                            <button  onClick={() => handleColor(Color.RED)} ><div className="w-8 h-8 bg-accent-red  rounded-full"></div></button>
-                                            <button  onClick={() => handleColor(Color.YELLOW)}><div className="w-8 h-8 bg-accent-yellow   rounded-full"></div></button>
+                        ) : (<button
+                            onClick={() => handleMenu()}
+                        >
+                            <FontAwesomeIcon
+                                className="display-block text-white text-2xl h-6 w-6 mr-2 md:hidden" icon={faTimes}/>
+                        </button>)
+                    }
+                    {/* DARK MODE SWITCHER*/}
+                    <button
+                        onClick={handleDark}
+                        className="mx-4 text-lg h-10 w-6"
+                    >
+                        <div className="flex items-center">
+                            {dark ? <FontAwesomeIcon
+                                className="text-light-primary" icon={faMoon}/> : <FontAwesomeIcon
+                                className="text-dark-primary" icon={faMoon}/>}
+
+                        </div>
+
+                    </button>
+                    {/* THEME SETTINGS y*/}
+                    <Popover className="relative h-10 w-6 mt-1 -mr-2">
+                        {({open}) => (
+                            <>
+                                <Popover.Button
+                                    className='group rounded-md inline-flex items-center text-base '
+                                >
+                                    <FontAwesomeIcon
+                                        className="text-light-primary text-xl" icon={faCog}/>
+                                </Popover.Button>
+
+                                <Transition
+                                    as={Fragment}
+                                    enter="transition ease-out duration-200"
+                                    enterFrom="opacity-0 translate-y-1"
+                                    enterTo="opacity-100 translate-y-0"
+                                    leave="transition ease-in duration-150"
+                                    leaveFrom="opacity-100 translate-y-0"
+                                    leaveTo="opacity-0 translate-y-1"
+                                >
+                                    <Popover.Panel
+                                        className="absolute flex flex-col place-content-evenly  z-10 left-0 transform -translate-x-[55%] translate-y-2 mt-3 px-2 w-[5.65rem] md:w-28">
+                                        <div
+                                            className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                            <div
+                                                className="relative flex flex-col content-center bg-dark-secondary px-5 py-6 gap-8 sm:p-8">
+                                                <p className="text-sm text-white">Tema</p>
+                                                <button onClick={() => handleColor(Color.GREEN)}>
+                                                    <div
+                                                        className="w-8 h-8 bg-accent-green  rounded-full hover:border-4 hover:border-white"></div>
+                                                </button>
+                                                <button onClick={() => handleColor(Color.PINK)}>
+                                                    <div
+                                                        className="w-8 h-8 bg-accent-pink   rounded-full hover:border-4 hover:border-white"></div>
+                                                </button>
+                                                <button onClick={() => handleColor(Color.RED)}>
+                                                    <div
+                                                        className="w-8 h-8 bg-accent-red  rounded-full hover:border-4 hover:border-white"></div>
+                                                </button>
+                                                <button onClick={() => handleColor(Color.YELLOW)}>
+                                                    <div
+                                                        className="w-8 h-8 bg-accent-yellow   rounded-full hover:border-4 hover:border-white"></div>
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </Popover.Panel>
-                            </Transition>
-                        </>
-                    )}
-                </Popover>
-
+                                    </Popover.Panel>
+                                </Transition>
+                            </>
+                        )}
+                    </Popover>
+                </div>
             </div>
 
         </nav>
