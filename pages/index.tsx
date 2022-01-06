@@ -1,4 +1,5 @@
 import type {NextPage} from 'next'
+import { Hero } from '../components/hero';
 import {Navbar} from "../components/navbar";
 import {Social} from "../components/social";
 
@@ -12,8 +13,10 @@ const Home: NextPage = () => {
             </div>
             <div className=" row-span-1 col-span-8 "><Navbar></Navbar></div>
             <div className=" row-span-5 col-span-8 grid grid-cols-6">
-                <div className="bg-accent-yellow col-span-5"></div>
-                <div className="bg-amber-50 col-span-1"></div>
+                <div className="bg-dark-primary col-span-5">
+                    <Hero />
+                </div>
+                <div className="bg-dark-primary col-span-1"></div>
             </div>
         </div>
     )

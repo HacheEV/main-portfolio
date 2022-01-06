@@ -68,7 +68,7 @@ export const Navbar = () => {
                     </div>
                 </div>
                 {/* RESPONSIVE MENU */}
-                { !menu ? (
+                { menu ? (
                         <div className="relative h-10 w-6 mt-1 -mr-2">
                     <div
                         className="absolute flex flex-col place-content-evenly  z-10 left-0 transform -translate-x-[55%] translate-y-[6.75rem] mt-3 px-2 w-60">
@@ -118,7 +118,7 @@ export const Navbar = () => {
                 <div className="flex justify-evenly items-baseline w-28">
                 {/* HAMBURGER*/}
                     {
-                        menu ? (<button
+                        !menu ? (<button
                                 onClick={() => handleMenu()}
                             >
                                 <FontAwesomeIcon
