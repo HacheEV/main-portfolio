@@ -53,7 +53,7 @@ export const Navbar = () => {
     return (
         <nav className="flex justify-between font-Montserrat text-white text-3xl">
             <div className="flex">
-                <div className="mt-4 ml-2 mr-3">
+                <div className="mt-3 ml-2 mr-3 scale-[78%] md:mt-4 md:scale-[100%]">
                     <Image src={darkLogo} width={125} height={100}/>
                 </div>
                 <div className="hidden md:flex inline">
@@ -71,7 +71,7 @@ export const Navbar = () => {
                 { menu ? (
                         <div className="relative h-10 w-6 mt-1 -mr-2">
                     <div
-                        className="absolute flex flex-col place-content-evenly  z-10 left-0 transform -translate-x-[55%] translate-y-[6.75rem] mt-3 px-2 w-60">
+                        className="absolute flex flex-col place-content-evenly  z-50 left-0 transform -translate-x-[55%] translate-y-[6.75rem] mt-3 px-2 w-60">
                         <div
                             className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div
@@ -166,7 +166,7 @@ export const Navbar = () => {
                                     leaveTo="opacity-0 translate-y-1"
                                 >
                                     <Popover.Panel
-                                        className="absolute flex flex-col place-content-evenly  z-10 left-0 transform -translate-x-[55%] translate-y-2 mt-3 px-2 w-[5.65rem] md:w-28">
+                                        className="absolute flex flex-col place-content-evenly  z-50 left-0 transform -translate-x-[55%] translate-y-2 mt-3 px-2 w-[5.65rem] md:w-28">
                                         <div
                                             className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                             <div
