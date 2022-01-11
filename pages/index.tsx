@@ -1,6 +1,7 @@
 import type {NextPage} from 'next'
 import { Hero } from '../components/hero';
 import {Navbar} from "../components/navbar";
+import { Skills } from '../components/skills';
 import {Social} from "../components/social";
 
 
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
             <div className=" row-span-5 col-span-8 grid grid-cols-6">
                 <div className="bg-dark-primary col-span-5">
                     <Hero />
+                    <Skills />
                 </div>
                 <div className="bg-dark-primary col-span-1"></div>
             </div>
