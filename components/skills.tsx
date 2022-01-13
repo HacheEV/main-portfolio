@@ -26,7 +26,7 @@ export const Skills = () => {
     const [devops, setDevops] = useState<boolean>(false)
 
     return (
-        <div className="p-4">
+        <div id="skills" className="p-4">
             {/*DESKTOP*/}
             <div className="sm:hidden lg:flex flex-col lg:mt-6 lg:bg-dark-primary lg:w-full h-screen">
                 <div className="w-full relative">

@@ -58,7 +58,7 @@ export const Navbar = () => {
                 </div>
                 <div className="hidden md:flex inline">
                     <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
-                        <a href="#"> Skills</a>
+                        <a href="#skills"> Skills</a>
                     </div>
                     <div className="mt-10 mr-4 py-2 h-14 navbar-link">
                         <a href="#"> Work</a>
@@ -77,7 +77,7 @@ export const Navbar = () => {
                             <div
                                 className="relative flex flex-col content-center bg-dark-secondary h-[20.25rem] px-5 py-6 gap-2">
                                 <div className="py-2 h-14 navbar-link ">
-                                    <a href="#"> Skills</a>
+                                    <a href="#skills"> Skills</a>
                                 </div>
                                 <div className="mt-10 mr-4 py-2 h-14 navbar-link">
                                     <a href="#"> Work</a>
