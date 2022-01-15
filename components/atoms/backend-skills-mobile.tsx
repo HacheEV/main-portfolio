@@ -28,22 +28,22 @@ export const BackendSkillsMobile = () => {
                 </button>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-[25.5rem] -right-16 invert",
-                backend ? "transition duration-[800ms] -translate-x-72 -translate-y-12" :
+                backend ? "transition duration-[800ms] -translate-x-64 -translate-y-12" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={Python}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-20 top-[25.5rem] -right-16 invert",
-                backend ? "transition duration-[800ms] -translate-x-[19rem] translate-y-12" :
+                backend ? "transition duration-[800ms] -translate-x-[18rem] translate-y-12" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={PHP}/>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-[25.5rem] -right-16 invert",
-                backend ? "transition duration-[800ms] -translate-x-[19rem] translate-y-44" :
+                backend ? "transition duration-[800ms] -translate-x-[17rem] translate-y-32" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={Java}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-24 top-[25.5rem] -right-16 invert",
-                backend ? "transition duration-[800ms] -translate-x-[12rem] translate-y-80" :
+                backend ? "transition duration-[800ms] -translate-x-[12rem] translate-y-64" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={Node}/>
             </div>

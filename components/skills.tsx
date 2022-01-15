@@ -3,6 +3,7 @@ import {BackendSkills} from "./atoms/backend-skills";
 import {DevopsSkills} from "./atoms/devops-skills";
 import {FrontendSkillsMobile} from "./atoms/frontend-skills-mobile";
 import {BackendSkillsMobile} from "./atoms/backend-skills-mobile";
+import {DevopsSkillsMobile} from "./atoms/devops-skills-mobile";
 
 
 export const Skills = () => {
@@ -31,6 +32,7 @@ export const Skills = () => {
                     <BackendSkillsMobile />
                 </div>
                 <div className="flex relative w-full">
+                    <DevopsSkillsMobile />
                 </div>
             </div>
         </div>
