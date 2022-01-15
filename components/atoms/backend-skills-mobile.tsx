@@ -18,8 +18,8 @@ export const BackendSkillsMobile = () => {
     return (
         <>
             <div
-                className="flex justify-center items-center flex-col absolute z-50 top-96 -right-8 mr-0 mt-8 bg-accent-green w-60 h-60 rounded-full origin-bottom rotate-6">
-                <p className="font-Bebas text-5xl">backendend</p>
+                className="flex justify-center items-center flex-col absolute z-50 top-96 -right-8 mr-0 mt-8 bg-accent-green w-52 h-52 rounded-full origin-bottom rotate-6">
+                <p className="font-Bebas text-5xl">Backend</p>
                 <button
                     onClick={handleBackend}
                     className="bg-dark-third text-white mt-5 rounded-full p-2 animate-pulse"
@@ -27,23 +27,23 @@ export const BackendSkillsMobile = () => {
                     <p className="font-Montserrat text-md">Push</p>
                 </button>
             </div>
-            <div className={classNames("absolute w-24 h-24 z-20 top-60 right-0 invert",
-                backend ? "transition duration-[800ms] -translate-x-72 -translate-y-28" :
+            <div className={classNames("absolute w-16 h-16 z-20 top-[25.5rem] -right-16 invert",
+                backend ? "transition duration-[800ms] -translate-x-72 -translate-y-12" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={Python}/>
             </div>
-            <div className={classNames("absolute w-28 h-28 z-20 top-60 -right-4 invert",
-                backend ? "transition duration-[800ms] -translate-x-[22rem] translate-y-12" :
+            <div className={classNames("absolute w-20 h-20 z-20 top-[25.5rem] -right-16 invert",
+                backend ? "transition duration-[800ms] -translate-x-[19rem] translate-y-12" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={PHP}/>
             </div>
-            <div className={classNames("absolute w-20 h-20 z-20 top-60 -right-4 invert",
-                backend ? "transition duration-[800ms] -translate-x-[23rem] translate-y-44" :
+            <div className={classNames("absolute w-16 h-16 z-20 top-[25.5rem] -right-16 invert",
+                backend ? "transition duration-[800ms] -translate-x-[19rem] translate-y-44" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={Java}/>
             </div>
-            <div className={classNames("absolute w-24 h-20 z-24 top-60 -right-4 invert",
-                backend ? "transition duration-[800ms] -translate-x-[20rem] translate-y-80" :
+            <div className={classNames("absolute w-20 h-20 z-24 top-[25.5rem] -right-16 invert",
+                backend ? "transition duration-[800ms] -translate-x-[12rem] translate-y-80" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={Node}/>
             </div>
