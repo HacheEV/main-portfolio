@@ -16,7 +16,7 @@ export const DevopsSkills = () => {
     return (
         <>
             <div
-                className="flex justify-center items-center absolute z-50 top-[33rem] left-0 bg-accent-green w-64 h-64 rounded-md origin-bottom rotate-6 hover:transition ease-linear duration-700 hover:scale-105 hover:-rotate-[4deg]"
+                className="flex justify-center items-center absolute z-50 top-[33rem] left-0 bg-accent-green w-64 h-64 rounded-md origin-bottom -rotate-3 hover:transition ease-linear duration-700 hover:scale-105 hover:-rotate-[4deg]"
                 onMouseEnter={(e) => devops ? null : setDevops(true)}
                 onMouseLeave={(e) => !devops ? null : setDevops(false)}
             >

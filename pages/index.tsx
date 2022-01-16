@@ -3,6 +3,7 @@ import { Hero } from '../components/hero';
 import {Navbar} from "../components/navbar";
 import { Skills } from '../components/skills';
 import {Social} from "../components/social";
+import {Works} from "../components/works";
 
 
 const Home: NextPage = () => {
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
                 <div className="bg-dark-primary col-span-5">
                     <Hero />
                     <Skills />
+                    <Works />
                 </div>
                 <div className="bg-dark-primary col-span-1"></div>
             </div>

@@ -33,7 +33,7 @@ export const BackendSkillsMobile = () => {
                 <Image src={Python}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-20 top-[25.5rem] -right-16 invert",
-                backend ? "transition duration-[800ms] -translate-x-[18rem] translate-y-12" :
+                backend ? "transition duration-[800ms] -translate-x-[17rem] translate-y-12" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
                 <Image src={PHP}/>
             </div>
