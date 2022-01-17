@@ -48,7 +48,5 @@ export const BackendSkillsMobile = () => {
                 <Image src={Node}/>
             </div>
         </>
-
     )
-
 }

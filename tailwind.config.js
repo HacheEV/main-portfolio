@@ -10,6 +10,9 @@ module.exports = {
                 "Bebas": ["Bebas Neue", ...defaultTheme.fontFamily.sans],
                 "Montserrat": ["Montserrat", ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: {
+                'Hidreco': "url('/img/hidreco.png')"
+            },
             colors: {
                 "white": "#FFFFFF",
                 "dark-primary": "#0A0F0D",
