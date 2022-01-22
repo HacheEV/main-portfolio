@@ -24,6 +24,7 @@ export const Works = () => {
                      ref={ref}
                 >
                     {/*FIRST ROW*/}
+                    {/*TODO ASK VICTOR WICH RESPONSIVE FOLLOW*/}
                     <div id="1" className="col-span-2 w-72 h-56 lg:col-span-3">
                         <WorkCard isSectionVisible={isSectionVisible} delay="delay-300" background="bg-Hidreco"
                                   projectLink="https://www.hidreco.es"
