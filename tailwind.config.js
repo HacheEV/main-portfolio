@@ -11,7 +11,10 @@ module.exports = {
                 "Montserrat": ["Montserrat", ...defaultTheme.fontFamily.sans],
             },
             backgroundImage: {
-                'Hidreco': "url('/img/hidreco.png')"
+                'Hidreco': "url('/img/hidreco.png')",
+                'Render': "url('/img/render_props.png')",
+                'Blackvil': "url('/img/blackvil.png')",
+                'David': "url('/img/david_esteve.png')",
             },
             colors: {
                 "white": "#FFFFFF",
