@@ -6,8 +6,6 @@ import React from 'react';
 
 
 const Contact: NextPage = () => {
-
-
     return (
         <div className="bg-dark-primary grid grid-cols-9 grid-rows-6 grid-flow-col w-full h-screen overflow-x-hidden">
             <div className="flex flex-col row-span-6 col-span-1 h-screen w-32 z-20">
