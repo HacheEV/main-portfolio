@@ -26,7 +26,7 @@ export const Works = () => {
                     {/*FIRST ROW*/}
                     {/*TODO ASK VICTOR WICH RESPONSIVE FOLLOW*/}
                     <div id="1" className="col-span-2 w-72 h-56 lg:col-span-3">
-                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-300"
+                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-100"
                                   background="bg-Hidreco"
                                   projectLink="https://www.hidreco.es"
                                   shadowColor="shadow-accent-green"
@@ -53,7 +53,7 @@ export const Works = () => {
                         <FadeSide show={isSectionVisible} />
                     </div>
                     <div className="col-span-2 w-72 h-56 lg:col-span-3">
-                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-1000"
+                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-500"
                                   background="bg-David"
                                   projectLink="https://www.davidestevepastisseria.es/"
                                   shadowColor="shadow-accent-green"
@@ -64,7 +64,7 @@ export const Works = () => {
                         <FadeSide show={isSectionVisible} />
                     </div>
                     <div className="col-span-2 w-72 h-56 lg:col-span-3">
-                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-[1300ms]"
+                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-[700ms]"
                                   background="bg-Blackvil"
                                   projectLink="https://blackviltattoo.com/"
                                   shadowColor="shadow-accent-green"
