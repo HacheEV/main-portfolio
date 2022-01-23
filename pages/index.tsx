@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                     <Footer />
                 </div>
                 <div className="flex flex-col justify-end bg-dark-primary col-span-1">
-                    <div className="text-accent-green text-xl font-Montserrat rotate-90 mb-52 md:mb-44">
+                    <div className="text-accent-green text-xl font-Montserrat rotate-90 mb-52 md:mb-52 md:ml-8 lg:mb-44 lg:ml-0">
                         <p >hector@hevprojects.com</p>
                     </div>
                     <div className="green-line-bottom"></div>
