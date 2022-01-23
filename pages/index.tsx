@@ -30,7 +30,7 @@ const Home: NextPage = () => {
                     <Footer />
                 </div>
                 <div className="flex flex-col justify-end bg-dark-primary col-span-1">
-                    <div className="ml-[0.7rem] mb-8 md:mb-12 lg:mb-[4.5rem] lg:ml-[3.6rem] w-auto">
+                    <div className="ml-[0.7rem] mb-8 md:mb-12 md:ml-[3.8rem] lg:mb-[4.5rem] lg:ml-[3.6rem] w-auto">
                         <Link href="#top">
                             <a>
                                 <FontAwesomeIcon className="text-accent-green text-4xl" icon={faArrowCircleUp} />
