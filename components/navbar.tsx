@@ -59,7 +59,10 @@ export const Navbar = () => {
         <nav className="flex justify-between font-Montserrat text-white text-3xl">
             <div className="flex">
                 <div className="mt-3 ml-2 mr-3 scale-[78%] md:mt-4 md:scale-[100%]">
-                    <Image src={darkLogo} width={125} height={100}/>
+                    <Link href="/" >
+                        <Image className="cursor-pointer" src={darkLogo} width={125} height={100}/>
+                    </Link>
+
                 </div>
                 <div className="hidden md:flex inline">
                     <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
