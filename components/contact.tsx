@@ -27,7 +27,7 @@ export const Contact = () => {
                     <p className="font-Montserrat text-4xl text-white font-bold">Get start your project now!</p>
                 </div>
                 <div className="flex justify-center">
-                    <button className="rounded-lg bg-dark-primary font-Montserrat text-2xl text-white font-bold tracking-[0.15em] w-44 h-14 mt-4 ml-4 shadow-sm shadow-white">
+                    <button className="rounded-lg bg-dark-primary font-Montserrat text-2xl text-white font-bold tracking-[0.15em] w-44 h-14 mt-4 shadow-sm shadow-white">
                         Contact
                     </button>
 
