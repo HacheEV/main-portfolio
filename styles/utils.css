@@ -3,6 +3,12 @@
     margin-left: 4rem;
     height: 58%;
 }
+.green-line-bottom{
+    border-left: 6px solid #519872 ;
+    margin-top: 6px;
+    margin-left: 4.5rem;
+    height: 16%;
+}
 
 .navbar-link:hover{
     border-bottom: 8px solid #519872;
@@ -12,5 +18,11 @@
 @media (max-width: 768px) {
     .green-line {
         margin-left: 2rem;
+    }
+    .green-line-bottom{
+        border-left: 6px solid #519872 ;
+        margin-top: 14px;
+        margin-left: 1.8rem;
+        height:15%;
     }
 }

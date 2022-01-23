@@ -5,6 +5,7 @@ import { Skills } from '../components/skills';
 import {Social} from "../components/social";
 import {Works} from "../components/works";
 import {Contact} from "../components/contact";
+import {Footer} from "../components/footer";
 
 
 const Home: NextPage = () => {
@@ -21,8 +22,15 @@ const Home: NextPage = () => {
                     <Skills />
                     <Works />
                     <Contact />
+                    <Footer />
                 </div>
-                <div className="bg-dark-primary col-span-1"></div>
+                <div className="flex flex-col justify-end bg-dark-primary col-span-1">
+                    <div className="text-accent-green text-xl font-Montserrat rotate-90 mb-52 md:mb-44">
+                        <p >hector@hevprojects.com</p>
+                    </div>
+                    <div className="green-line-bottom"></div>
+
+                </div>
             </div>
         </div>
     )
