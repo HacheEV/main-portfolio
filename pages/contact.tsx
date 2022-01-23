@@ -2,6 +2,7 @@ import {NextPage} from "next";
 import {Navbar} from "../components/navbar";
 import {Social} from "../components/social";
 import React from 'react';
+import {Footer} from "../components/footer";
 
 
 
@@ -109,7 +110,12 @@ const Contact: NextPage = () => {
                         </div>
                     </div>
                 </div>
+                <div className="col-span-9">
+                    <Footer />
+                </div>
+
             </div>
+
         </div>
     )
 }

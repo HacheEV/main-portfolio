@@ -1,4 +1,5 @@
 import {Navbar} from "./navbar";
+import Link from "next/link";
 
 export const Contact = () => {
     return (
@@ -15,7 +16,9 @@ export const Contact = () => {
                 <div className="absolute z-20 top-0 right-0 bg-dark-third w-[35%] h-[65%] rounded-md translate-x-7 shadow-md shadow-accent-green lg:translate-x-0">
                     <div className="relative w-full h-full">
                         <button className="absolute bottom-6 left-6 rounded-lg bg-dark-primary font-Montserrat text-1xl text-white font-bold tracking-[0.15em] w-36 h-10 shadow-sm shadow-white">
-                            Contact
+                            <Link href="/contact">
+                                <a> Contact</a>
+                            </Link>
                         </button>
                     </div>
                 </div>
@@ -28,7 +31,9 @@ export const Contact = () => {
                 </div>
                 <div className="flex justify-center">
                     <button className="rounded-lg bg-dark-primary font-Montserrat text-2xl text-white font-bold tracking-[0.15em] w-44 h-14 mt-4 shadow-sm shadow-white">
-                        Contact
+                        <Link href="/contact">
+                            <a> Contact</a>
+                        </Link>
                     </button>
 
                 </div>

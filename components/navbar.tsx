@@ -10,6 +10,8 @@ import {faTimes} from '@fortawesome/free-solid-svg-icons'
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import {Fragment} from 'react'
 import {Popover, Transition} from '@headlessui/react'
+import Link from 'next/link';
+import {useRouter} from "next/router";
 
 
 enum Color {
@@ -25,11 +27,14 @@ enum Language {
 }
 
 export const Navbar = () => {
+    const router = useRouter()
     const [enabled, setEnabled] = useState<boolean>(false)
     const [menu, setMenu] = useState<boolean>(false)
     const [dark, setDark] = useState<boolean>(true)
     const [open, setOpen] = useState<boolean>(false)
     const [color, setColor] = useState<Color>(Color.GREEN)
+
+    const path = router.pathname
 
     const handleDark = () => {
         if (dark) {
@@ -58,13 +63,16 @@ export const Navbar = () => {
                 </div>
                 <div className="hidden md:flex inline">
                     <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
-                        <a href="#skills"> Skills</a>
+                        <a href={path == "/" ? "#skills" : "/#skills"}> Skills</a>
                     </div>
                     <div className="mt-10 mr-4 py-2 h-14 navbar-link">
-                        <a href="#"> Work</a>
+                        <a href={path == "/" ? "#works" : "/#works"}> Works</a>
                     </div>
                     <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
-                        <a href="#"> Contact</a>
+                        <Link href="/contact">
+                            <a> Contact</a>
+                        </Link>
+
                     </div>
                 </div>
                 {/* RESPONSIVE MENU */}
@@ -77,13 +85,15 @@ export const Navbar = () => {
                             <div
                                 className="relative flex flex-col content-center bg-dark-secondary h-[20.25rem] px-5 py-6 gap-2">
                                 <div className="py-2 h-14 navbar-link ">
-                                    <a href="#skills"> Skills</a>
+                                    <a href={path == "/" ? "#skills" : "/#skills"}> Skills</a>
                                 </div>
                                 <div className="mt-10 mr-4 py-2 h-14 navbar-link">
-                                    <a href="#"> Work</a>
+                                    <a href={path == "/" ? "#works" : "/#works"}> Works</a>
                                 </div>
                                 <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
-                                    <a href="#"> Contact</a>
+                                    <Link href="/contact">
+                                        <a> Contact</a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
