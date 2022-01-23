@@ -56,7 +56,7 @@ export const Navbar = () => {
     }
 
     return (
-        <nav className="flex justify-between font-Montserrat text-white text-3xl">
+        <nav id="top" className="flex justify-between font-Montserrat text-white text-3xl">
             <div className="flex">
                 <div className="mt-3 ml-2 mr-3 scale-[78%] md:mt-4 md:scale-[100%]">
                     <Link href="/" >

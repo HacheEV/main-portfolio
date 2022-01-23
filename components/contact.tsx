@@ -5,7 +5,7 @@ export const Contact = () => {
     return (
         <>
             {/*DESKTOP*/}
-            <div className="hidden md:block md:relative z-0 md:mt-20 md:w-full md:h-64  md:my-4">
+            <div className="hidden md:block md:relative z-0 md:mt-20 mx-4 md:w-full md:h-64  md:my-4">
                 <div
                     className="absolute z-0 bottom-0 left-0 flex items-center justify-center bg-dark-secondary w-[85%] h-[85%] rounded-md shadow-[2px_3px_9px_0px_rgba(0,0,0,0.3)] shadow-accent-green">
                     <div className="md:-translate-x-12 lg:-translate-x-24">
@@ -24,8 +24,8 @@ export const Contact = () => {
                 </div>
             </div>
             {/*MOBILE*/}
-            <div className="block w-[95%] p-6 my-14 flex flex-col bg-dark-third rounded-md md:hidden">
-                <div className="w-[30ch] my-4 text-center">
+            <div className="block w-[87%] p-6 my-14 mx-5 flex flex-col bg-dark-third rounded-md md:hidden">
+                <div className="w-[27ch] my-4 text-center">
                     <p className="font-Montserrat text-3xl text-white italic font-bold mb-2">Ready to contact me?</p>
                     <p className="font-Montserrat text-4xl text-white font-bold">Get start your project now!</p>
                 </div>
