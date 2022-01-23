@@ -20,13 +20,14 @@ export const Works = () => {
         <>
             <ProductSectionContextProvider>
                 <div id="works"
-                     className="mt-[13rem] grid grid-cols-1 gap-x-0 gap-y-20 md:mt-[6rem] md:grid-cols-2 md:gap-x-0 md:gap-y-20 lg:mt-10 lg:grid-cols-8 lg:grid-rows-2 lg:gap-x-1 lg:gap-y-16"
+                     className="mt-[13rem] grid grid-cols-1 gap-x-0 gap-y-12 md:mt-[2rem] md:grid-cols-2 md:gap-x-0 md:gap-y-20 lg:mt-10 lg:grid-cols-8 lg:grid-rows-2 lg:gap-x-1 lg:gap-y-16"
                      ref={ref}
                 >
                     {/*FIRST ROW*/}
                     {/*TODO ASK VICTOR WICH RESPONSIVE FOLLOW*/}
                     <div id="1" className="col-span-2 w-72 h-56 lg:col-span-3">
-                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-300" background="bg-Hidreco"
+                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-300"
+                                  background="bg-Hidreco"
                                   projectLink="https://www.hidreco.es"
                                   shadowColor="shadow-accent-green"
                                   title="Hidreco"
@@ -36,7 +37,8 @@ export const Works = () => {
                         <FadeSide show={isSectionVisible} />
                     </div>
                     <div id="3" className="col-span-2 w-72 h-56 lg:col-span-3">
-                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-300" background="bg-Render"
+                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-300"
+                                  background="bg-Render"
                                   projectLink="https://renderprops.vercel.app/"
                                   shadowColor="shadow-accent-green"
                                   title="RenderProps"
@@ -51,7 +53,8 @@ export const Works = () => {
                         <FadeSide show={isSectionVisible} />
                     </div>
                     <div className="col-span-2 w-72 h-56 lg:col-span-3">
-                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-1000" background="bg-David"
+                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-1000"
+                                  background="bg-David"
                                   projectLink="https://www.davidestevepastisseria.es/"
                                   shadowColor="shadow-accent-green"
                                   title="David Esteve"
@@ -61,7 +64,8 @@ export const Works = () => {
                         <FadeSide show={isSectionVisible} />
                     </div>
                     <div className="col-span-2 w-72 h-56 lg:col-span-3">
-                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-[1300ms]" background="bg-Blackvil"
+                        <WorkCard isSectionVisible={isSectionVisible} delay="delay-[1300ms]"
+                                  background="bg-Blackvil"
                                   projectLink="https://blackviltattoo.com/"
                                   shadowColor="shadow-accent-green"
                                   title="Blackvil Tattoo"

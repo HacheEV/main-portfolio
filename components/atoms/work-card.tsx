@@ -23,13 +23,13 @@ export const WorkCard = ({isSectionVisible, background, shadowColor, projectLink
                 enterFrom="opacity-0 transform -translate-x-14"
                 enterTo="opacity-100 transform translate-x-0"
             >
-            <div className={classNames("relative w-80 h-64 m-2 z-0 p-2", className)}
+            <div className={classNames("relative w-72 h-60 m-2 z-0 p-2 md:w-80 md:h-64 ", className)}
                  onMouseEnter={(e) => product ? null : setProduct(true)}
                  onMouseLeave={(e) => !product ? null : setProduct(false)}
             >
-                <h3 className="text-white font-Montserrat text-2xl font-semibold ml-8">{title}</h3>
+                <h3 className="text-white font-Montserrat text-2xl font-semibold ml-8 mb-2">{title}</h3>
                 <div
-                    className={classNames("w-full h-full rounded-lg bg-cover opacity-50 top-0 left-0 z-10 shadow-[4px_9px_15px_0px_rgba(0,0,0,0.3)]",shadowColor, background)}
+                    className={classNames("w-full h-44 rounded-lg bg-cover bg-no-repeat p-2 opacity-50 top-0 left-0 z-10 shadow-[4px_9px_15px_0px_rgba(0,0,0,0.3)]",shadowColor, background)}
                 >
                 </div>
                 <div
