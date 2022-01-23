@@ -4,6 +4,7 @@ import {Navbar} from "../components/navbar";
 import { Skills } from '../components/skills';
 import {Social} from "../components/social";
 import {Works} from "../components/works";
+import {Contact} from "../components/contact";
 
 
 const Home: NextPage = () => {
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
                     <Hero />
                     <Skills />
                     <Works />
+                    <Contact />
                 </div>
                 <div className="bg-dark-primary col-span-1"></div>
             </div>
