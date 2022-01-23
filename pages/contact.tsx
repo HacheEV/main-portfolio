@@ -1,12 +1,13 @@
 import {NextPage} from "next";
 import {Navbar} from "../components/navbar";
 import {Social} from "../components/social";
-import {Hero} from "../components/hero";
-import {Skills} from "../components/skills";
-import {Works} from "../components/works";
+import React from 'react';
+
 
 
 const Contact: NextPage = () => {
+
+
     return (
         <div className="bg-dark-primary grid grid-cols-9 grid-rows-6 grid-flow-col w-full h-screen overflow-x-hidden">
             <div className="flex flex-col row-span-6 col-span-1 h-screen w-32 z-20">
@@ -18,12 +19,10 @@ const Contact: NextPage = () => {
             </div>
             <div className=" row-span-5 col-span-9 grid grid-cols-6">
                 <div className="bg-dark-primary col-span-6">
-
-
                     <div className="mt-10 sm:mt-0">
                         <div className="md:grid md:grid-cols-3 md:gap-6">
                             <div className="mt-5 md:mt-0 md:col-span-3">
-                                <form action="#" method="POST">
+                                <form action="https://formsubmit.co/hector@hevprojects.com" method="POST">
                                     <div className="p-4 shadow overflow-hidden rounded-md">
                                         <div className="px-4 bg-dark-primary sm:p-6">
                                             <div className="grid grid-cols-6 gap-6">
@@ -54,26 +53,26 @@ const Contact: NextPage = () => {
                                                 </div>
 
                                                 <div className="col-span-6 sm:col-span-3">
-                                                    <label htmlFor="email-address" className="block font-Montserrat text-xl text-white">
+                                                    <label htmlFor="email" className="block font-Montserrat text-xl text-white">
                                                         Email address
                                                     </label>
                                                     <input
-                                                        type="text"
-                                                        name="email-address"
-                                                        id="email-address"
+                                                        type="email"
+                                                        name="email"
+                                                        id="email"
                                                         autoComplete="email"
                                                         className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                     />
                                                 </div>
 
                                                 <div className="col-span-6 sm:col-span-3">
-                                                    <label htmlFor="country" className="block font-Montserrat text-xl text-white">
+                                                    <label htmlFor="reason" className="block font-Montserrat text-xl text-white">
                                                         Reason
                                                     </label>
                                                     <select
-                                                        id="country"
-                                                        name="country"
-                                                        autoComplete="country-name"
+                                                        id="reason"
+                                                        name="reason"
+                                                        autoComplete="reason"
                                                         className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                     >
                                                         <option>New website</option>
@@ -85,13 +84,13 @@ const Contact: NextPage = () => {
                                                 </div>
 
                                                 <div className="col-span-6">
-                                                    <label htmlFor="street-address" className="block font-Montserrat text-xl text-white">
+                                                    <label htmlFor="message" className="block font-Montserrat text-xl text-white">
                                                         Tell me your idea
                                                     </label>
                                                     <textarea
                                                         rows={4}
-                                                        name="street-address"
-                                                        id="comment"
+                                                        name="message"
+                                                        id="message"
                                                         className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                         defaultValue={''}
                                                     />
