@@ -19,7 +19,7 @@ export const FrontendSkillsMobile = () => {
     return(
         <>
             <div
-                className="flex justify-center items-center flex-col absolute z-50 top-0 left-0 ml-4 mt-8 bg-accent-green w-52 h-52 rounded-full origin-bottom -rotate-6"
+                className="flex justify-center items-center flex-col absolute z-50 top-0 left-0 ml-4 mt-8 bg-accent-green w-52 h-52 rounded-full origin-bottom "
 
             >
                 <p className="font-Bebas text-5xl">Frontend</p>

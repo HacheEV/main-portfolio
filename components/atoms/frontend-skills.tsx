@@ -12,7 +12,7 @@ export const FrontendSkills = () => {
     return(
         <>
             <div
-                className="flex justify-center items-center absolute z-50 top-0 left-0 ml-4 mt-4 bg-accent-green w-64 h-64 rounded-md origin-bottom -rotate-3 hover:transition ease-linear duration-700 hover:scale-110 hover:-rotate-[8deg]"
+                className="flex justify-center items-center absolute z-50 top-0 left-0 ml-4 mt-4 bg-accent-green w-64 h-64 rounded-md origin-bottom hover:transition ease-linear duration-700 hover:scale-110 hover:-rotate-[8deg]"
                 onMouseEnter={(e) => front ? null : setFront(true)}
                 onMouseLeave={(e) => !front ? null : setFront(false)}
             >

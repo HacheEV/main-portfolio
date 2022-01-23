@@ -16,7 +16,7 @@ export const BackendSkills = () => {
     return(
         <>
             <div
-                className="flex justify-center items-center absolute z-50 top-64 bg-accent-green w-64 h-64 rounded-md origin-bottom rotate-3 hover:transition duration-700 hover:scale-110 hover:rotate-[9deg]"
+                className="flex justify-center items-center absolute z-50 top-64 bg-accent-green w-64 h-64 rounded-md origin-bottom hover:transition duration-700 hover:scale-110 hover:rotate-[9deg]"
                 onMouseEnter={(e) => back ? null : setBack(true)}
                 onMouseLeave={(e) => !back ? null : setBack(false)}
             >
