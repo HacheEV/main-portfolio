@@ -1,11 +1,12 @@
 import {Transition} from "@headlessui/react";
-import {useRef, useState} from "react";
+import {useContext, useRef, useState} from "react";
 import {classNames} from "../utils/utils";
 import {ProductSectionContextProvider} from "../hooks/use-product-section";
 import {useHasIntersected} from "../hooks/use-has-intersected";
 import {useMedia} from 'react-use';
 import FadeSide from "./atoms/fade-side";
 import {WorkCard} from "./atoms/work-card";
+import DarkModeContext from "../context/mode-context";
 
 export const Works = () => {
     const ref = useRef(null);

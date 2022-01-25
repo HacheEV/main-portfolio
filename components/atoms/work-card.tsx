@@ -1,7 +1,8 @@
 import FadeSide from "./fade-side";
 import {classNames} from "../../utils/utils";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import { Transition } from "@headlessui/react";
+import DarkModeContext from "../../context/mode-context";
 
 interface WorkCardProps {
     className?: string;
@@ -14,6 +15,7 @@ interface WorkCardProps {
 
 }
 export const WorkCard = ({isSectionVisible, background, shadowColor, projectLink, className, delay, title}:WorkCardProps) => {
+    const {darkMode, setDarkMode} = useContext(DarkModeContext)
     const [product, setProduct] = useState<boolean>(false);
 
     return(
@@ -27,9 +29,11 @@ export const WorkCard = ({isSectionVisible, background, shadowColor, projectLink
                  onMouseEnter={(e) => product ? null : setProduct(true)}
                  onMouseLeave={(e) => !product ? null : setProduct(false)}
             >
-                <h3 className="text-white font-Montserrat text-2xl font-semibold ml-8 mb-2">{title}</h3>
+                <h3 className={classNames("font-Montserrat text-2xl font-semibold ml-8 mb-2",
+                        darkMode ? "text-white" : "text-black")}
+                    >{title}</h3>
                 <div
-                    className={classNames("w-full h-44 rounded-lg bg-cover bg-no-repeat p-2 opacity-50 top-0 left-0 z-10 shadow-[4px_9px_15px_0px_rgba(0,0,0,0.3)]",shadowColor, background)}
+                    className={classNames("w-full h-44 rounded-lg bg-cover bg-no-repeat p-2 opacity-75 top-0 left-0 z-10 shadow-[4px_9px_15px_0px_rgba(0,0,0,0.3)]",shadowColor, background)}
                 >
                 </div>
                 <div

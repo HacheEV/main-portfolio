@@ -1,13 +1,15 @@
 import {classNames} from "../../utils/utils";
 import Image from "next/image";
-import ReactWhite from "../../public/assets/logos/react2.png";
+import React from "../../public/assets/logos/react-brands.svg";
 import Html from "../../public/assets/logos/html-test.png";
 import CSS from "../../public/assets/logos/css.svg";
 import JS from "../../public/assets/logos/js.png";
 import WP from "../../public/assets/logos/wordpress.png";
-import {useState} from "react";
+import {useContext, useState} from "react";
+import DarkModeContext from "../../context/mode-context";
 
 export const FrontendSkills = () => {
+    const {darkMode, setDarkMode} = useContext(DarkModeContext)
     const [front, setFront] = useState<boolean>(false)
     return(
         <>
@@ -20,27 +22,33 @@ export const FrontendSkills = () => {
             </div>
             <div className={classNames("absolute w-24 h-24 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] translate-x-40 -translate-y-32" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
-                <Image src={ReactWhite}/>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "invert" : ""
+                )}>
+                <Image src={React}/>
             </div>
-            <div className={classNames("absolute w-20 h-20 z-20 top-4 left-36 invert",
+            <div className={classNames("absolute w-20 h-20 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] translate-x-60" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "invert" : "")}>
                 <Image src={Html}/>
             </div>
-            <div className={classNames("absolute w-20 h-20 z-20 top-4 left-36 invert",
+            <div className={classNames("absolute w-20 h-20 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] translate-x-60 translate-y-32" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "invert" : "")}>
                 <Image src={CSS}/>
             </div>
-            <div className={classNames("absolute w-24 h-24 z-20 top-4 left-36 invert",
+            <div className={classNames("absolute w-24 h-24 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] translate-x-[9.5rem] translate-y-72" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "invert" : "")}>
                 <Image src={JS}/>
             </div>
-            <div className={classNames("absolute w-24 h-24 z-20 top-4 left-36 invert",
+            <div className={classNames("absolute w-24 h-24 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] -translate-x-[1rem] translate-y-80" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "invert" : "")}>
                 <Image src={WP}/>
             </div>
         </>

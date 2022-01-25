@@ -1,7 +1,8 @@
-import {useState} from 'react'
+import {useContext, useState} from 'react'
 import {Switch} from '@headlessui/react'
 import Image from 'next/image'
 import darkLogo from '../public/assets/dark-logo.png'
+import lightLogo from '../public/assets/light-logo.png'
 import {classNames} from "../utils/utils";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faMoon} from '@fortawesome/free-solid-svg-icons'
@@ -12,7 +13,7 @@ import {Fragment} from 'react'
 import {Popover, Transition} from '@headlessui/react'
 import Link from 'next/link';
 import {useRouter} from "next/router";
-
+import DarkModeContext from "../context/mode-context";
 
 enum Color {
     GREEN = 'green',
@@ -27,20 +28,23 @@ enum Language {
 }
 
 export const Navbar = () => {
+    const {darkMode, setDarkMode} = useContext(DarkModeContext)
+
     const router = useRouter()
     const [enabled, setEnabled] = useState<boolean>(false)
     const [menu, setMenu] = useState<boolean>(false)
-    const [dark, setDark] = useState<boolean>(true)
     const [open, setOpen] = useState<boolean>(false)
     const [color, setColor] = useState<Color>(Color.GREEN)
+
+    console.log(darkMode)
 
     const path = router.pathname
 
     const handleDark = () => {
-        if (dark) {
-            setDark(false)
+        if (darkMode) {
+            setDarkMode(false)
         } else {
-            setDark(true)
+            setDarkMode(true)
         }
     }
     const handleColor = (color: Color) => {
@@ -56,13 +60,14 @@ export const Navbar = () => {
     }
 
     return (
-        <nav id="top" className="flex justify-between font-Montserrat text-white text-3xl">
+        <nav id="top" className={classNames("flex justify-between font-Montserrat text-3xl",
+                darkMode ? "text-white" : "text-black")}
+            >
             <div className="flex">
                 <div className="mt-3 ml-2 mr-3 scale-[78%] md:mt-4 md:scale-[100%]">
                     <Link href="/" >
-                        <Image className="cursor-pointer" src={darkLogo} width={125} height={100}/>
+                        <Image className="cursor-pointer" src={darkMode ? darkLogo : lightLogo} width={125} height={100}/>
                     </Link>
-
                 </div>
                 <div className="hidden md:flex inline">
                     <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
@@ -151,7 +156,7 @@ export const Navbar = () => {
                         className="mx-4 text-lg h-10 w-6"
                     >
                         <div className="flex items-center">
-                            {dark ? <FontAwesomeIcon
+                            {darkMode ? <FontAwesomeIcon
                                 className="text-light-primary" icon={faMoon}/> : <FontAwesomeIcon
                                 className="text-dark-primary" icon={faMoon}/>}
 
@@ -165,8 +170,9 @@ export const Navbar = () => {
                                 <Popover.Button
                                     className='group rounded-md inline-flex items-center text-base '
                                 >
-                                    <FontAwesomeIcon
-                                        className="text-light-primary text-xl" icon={faCog}/>
+                                    {darkMode ? <FontAwesomeIcon
+                                        className="text-light-primary" icon={faCog}/> : <FontAwesomeIcon
+                                        className="text-dark-primary" icon={faCog}/>}
                                 </Popover.Button>
 
                                 <Transition

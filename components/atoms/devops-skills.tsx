@@ -5,13 +5,15 @@ import Html from "../../public/assets/logos/html-test.png";
 import CSS from "../../public/assets/logos/css.svg";
 import JS from "../../public/assets/logos/js.png";
 import WP from "../../public/assets/logos/wordpress.png";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import Docker from "../../public/assets/logos/docker.svg";
 import Git from "../../public/assets/logos/git.svg";
 import Jira from "../../public/assets/logos/jira.svg";
 import Cypress from "../../public/assets/logos/cypress.png";
+import DarkModeContext from "../../context/mode-context";
 
 export const DevopsSkills = () => {
+    const {darkMode, setDarkMode} = useContext(DarkModeContext)
     const [devops, setDevops] = useState<boolean>(false)
     return (
         <>
@@ -22,24 +24,28 @@ export const DevopsSkills = () => {
             >
                 <p className="font-Bebas text-5xl">DevOps</p>
             </div>
-            <div className={classNames("absolute w-24 h-24 z-20 top-[33rem] left-44 invert",
+            <div className={classNames("absolute w-24 h-24 z-20 top-[33rem] left-44",
                 devops ? "transition duration-[800ms] translate-x-32 -translate-y-6" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "invert" : "")}>
                 <Image src={Docker}/>
             </div>
-            <div className={classNames("absolute w-20 h-20 z-20 top-[33rem] left-44 invert",
+            <div className={classNames("absolute w-20 h-20 z-20 top-[33rem] left-44",
                 devops ? "transition duration-[800ms] translate-x-36 translate-y-24" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "invert" : "")}>
                 <Image src={Git}/>
             </div>
-            <div className={classNames("absolute w-20 h-20 z-20 top-[33rem] left-44 invert",
+            <div className={classNames("absolute w-20 h-20 z-20 top-[33rem] left-44",
                 devops ? "transition duration-[800ms] translate-x-32 translate-y-60" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "invert" : "")}>
                 <Image src={Jira}/>
             </div>
             <div className={classNames("absolute w-40 h-40 z-20 top-[33rem] left-44",
                 devops ? "transition duration-[800ms] -translate-x-20 translate-y-80" :
-                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12")}>
+                    "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
+                darkMode ? "" : "invert")}>
                 <Image src={Cypress}/>
             </div>
 

@@ -4,6 +4,8 @@ import {DevopsSkills} from "./atoms/devops-skills";
 import {FrontendSkillsMobile} from "./atoms/frontend-skills-mobile";
 import {BackendSkillsMobile} from "./atoms/backend-skills-mobile";
 import {DevopsSkillsMobile} from "./atoms/devops-skills-mobile";
+import {useContext} from "react";
+import DarkModeContext from "../context/mode-context";
 
 
 export const Skills = () => {
@@ -12,7 +14,7 @@ export const Skills = () => {
     return (
         <div id="skills" className="p-4">
             {/*DESKTOP*/}
-            <div className="hidden lg:block lg:flex flex-col lg:mt-6 lg:bg-dark-primary lg:w-full h-screen">
+            <div className="hidden lg:block lg:flex flex-col lg:mt-6 lg:w-full h-screen">
                 <div className="w-full relative">
                     <FrontendSkills/>
                 </div>
