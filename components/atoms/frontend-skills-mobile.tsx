@@ -7,9 +7,11 @@ import JS from "../../public/assets/logos/js.png";
 import WP from "../../public/assets/logos/wordpress.png";
 import {useContext, useState} from "react";
 import DarkModeContext from "../../context/mode-context";
+import ThemeContext from "../../context/theme-context/theme-context";
 
 export const FrontendSkillsMobile = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme} = useContext(ThemeContext)
     const [front, setFront] = useState<boolean>(false)
     const handleFrontend = () => {
         if(front){
@@ -21,7 +23,8 @@ export const FrontendSkillsMobile = () => {
     return(
         <>
             <div
-                className="flex justify-center items-center flex-col absolute z-50 top-0 left-0 ml-4 mt-8 bg-accent-green w-52 h-52 rounded-full origin-bottom "
+                className={classNames("flex justify-center items-center flex-col absolute z-50 top-0 left-0 ml-4 mt-8 w-52 h-52 rounded-full origin-bottom ",
+                    theme.bg ? theme.bg : "")}
 
             >
                 <p className="font-Bebas text-5xl">Frontend</p>

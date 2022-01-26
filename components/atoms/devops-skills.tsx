@@ -11,14 +11,17 @@ import Git from "../../public/assets/logos/git.svg";
 import Jira from "../../public/assets/logos/jira.svg";
 import Cypress from "../../public/assets/logos/cypress.png";
 import DarkModeContext from "../../context/mode-context";
+import ThemeContext from "../../context/theme-context/theme-context";
 
 export const DevopsSkills = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme} = useContext(ThemeContext)
     const [devops, setDevops] = useState<boolean>(false)
     return (
         <>
             <div
-                className="flex justify-center items-center absolute z-50 top-[33rem] left-0 bg-accent-green w-64 h-64 rounded-md origin-bottom hover:transition ease-linear duration-700 hover:scale-105 hover:-rotate-[4deg]"
+                className={classNames("flex justify-center items-center absolute z-50 top-[33rem] left-0 w-64 h-64 rounded-md origin-bottom hover:transition ease-linear duration-700 hover:scale-105 hover:-rotate-[4deg]",
+                    theme.bg ? theme.bg : "")}
                 onMouseEnter={(e) => devops ? null : setDevops(true)}
                 onMouseLeave={(e) => !devops ? null : setDevops(false)}
             >

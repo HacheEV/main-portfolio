@@ -1,12 +1,14 @@
 import MediumGreen from "../public/assets/medium-green.png";
 import MySelf from "../public/assets/personal-2.png";
 import Image from "next/image";
-import {useContext} from "react";
+import {useContext, useState} from "react";
 import DarkModeContext from "../context/mode-context";
 import {classNames} from "../utils/utils";
+import ThemeContext from "../context/theme-context/theme-context";
 
 export const Hero = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme} = useContext(ThemeContext)
 
     return (
         <div className={classNames("flex flex-col justify-evenly mt-20 md:flex-row-reverse",
@@ -18,7 +20,7 @@ export const Hero = () => {
                     <Image src={MySelf}/>
                 </div>
                 <div className="ml-6 w-[21rem] md:w-[27.5rem] md:ml-8 md:mt-10 md:mr-6 lg:w-[32rem] lg:mt-2">
-                    <Image src={MediumGreen}
+                    <Image src={theme ? theme.image : null}
                            className="hover:scale-[96%] hover:transition-transform hover:duration-300"></Image>
                 </div>
             </div>
@@ -38,8 +40,9 @@ export const Hero = () => {
                     download
                 >
                     <button
-                        className={classNames("font-Montserrat text-white w-40 h-10 mt-5 rounded-[10px] shadow-md hover:shadow-lg shadow-accent-green hover:shadow-accent-green transition-shadow duration-300 lg:mt-6",
-                            darkMode ? "bg-dark-third text-white" : "bg-light-third text-black")}
+                        className={classNames("font-Montserrat text-white w-40 h-10 mt-5 rounded-[10px] shadow-sm lg:mt-6",
+                            darkMode ? "bg-dark-third text-white" : "bg-light-third text-black",
+                            theme.shadow ? theme.shadow : "")}
                             >Descargar
                         CV
                     </button>

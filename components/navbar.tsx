@@ -14,13 +14,8 @@ import {Popover, Transition} from '@headlessui/react'
 import Link from 'next/link';
 import {useRouter} from "next/router";
 import DarkModeContext from "../context/mode-context";
+import ThemeContext, {Colors} from "../context/theme-context/theme-context";
 
-enum Color {
-    GREEN = 'green',
-    PINK = 'pink',
-    YELLOW = 'yellow',
-    RED = 'red',
-}
 
 enum Language {
     ESP = 'spanish',
@@ -29,15 +24,12 @@ enum Language {
 
 export const Navbar = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme, dispatch} = useContext(ThemeContext)
 
     const router = useRouter()
     const [enabled, setEnabled] = useState<boolean>(false)
     const [menu, setMenu] = useState<boolean>(false)
     const [open, setOpen] = useState<boolean>(false)
-    const [color, setColor] = useState<Color>(Color.GREEN)
-
-    console.log(darkMode)
-
     const path = router.pathname
 
     const handleDark = () => {
@@ -47,10 +39,7 @@ export const Navbar = () => {
             setDarkMode(true)
         }
     }
-    const handleColor = (color: Color) => {
-        setColor(color)
-        setOpen(false)
-    }
+
     const handleMenu = () => {
         if (menu) {
             setMenu(false)
@@ -70,13 +59,16 @@ export const Navbar = () => {
                     </Link>
                 </div>
                 <div className="hidden md:flex inline">
-                    <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
+                    <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
+                                theme.border ? theme.border : "")}>
                         <a href={path == "/" ? "#skills" : "/#skills"}> Skills</a>
                     </div>
-                    <div className="mt-10 mr-4 py-2 h-14 navbar-link">
+                    <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
+                        theme.border ? theme.border : "")}>
                         <a href={path == "/" ? "#works" : "/#works"}> Works</a>
                     </div>
-                    <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
+                    <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
+                        theme.border ? theme.border : "")}>
                         <Link href="/contact">
                             <a> Contact</a>
                         </Link>
@@ -191,19 +183,19 @@ export const Navbar = () => {
                                             <div
                                                 className="relative flex flex-col content-center bg-dark-secondary px-5 py-6 gap-8 sm:p-8">
                                                 <p className="text-sm text-white">Tema</p>
-                                                <button onClick={() => handleColor(Color.GREEN)}>
+                                                <button onClick={() => dispatch(Colors.GREEN)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-green  rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => handleColor(Color.PINK)}>
+                                                <button onClick={() => dispatch(Colors.PINK)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-pink   rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => handleColor(Color.RED)}>
+                                                <button onClick={() => dispatch(Colors.RED)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-red  rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => handleColor(Color.YELLOW)}>
+                                                <button onClick={() => dispatch(Colors.YELLOW)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-yellow   rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>

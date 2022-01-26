@@ -5,6 +5,7 @@ import React, {useContext} from 'react';
 import {Footer} from "../components/footer";
 import DarkModeContext from "../context/mode-context";
 import {classNames} from "../utils/utils";
+import ThemeContext from "../context/theme-context/theme-context";
 
 interface contactProps {
     props:any;
@@ -13,11 +14,13 @@ interface contactProps {
 
 const Contact: NextPage = (props:any) => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme} = useContext(ThemeContext)
     return (
             <div className={classNames("grid grid-cols-9 grid-rows-6 grid-flow-col w-full h-screen overflow-x-hidden",
                 darkMode ? "bg-dark-primary" : "bg-light-primary")}>
                 <div className="flex flex-col row-span-6 col-span-1 h-screen w-32 z-20">
-                    <div className="green-line"></div>
+                    <div className={classNames("h-[58%] ml-8 md:ml-16 border-l-[5px]",
+                        theme.border ? theme.border : "")}></div>
                     <Social/>
                 </div>
                 <div className=" row-span-1 col-span-9 ">

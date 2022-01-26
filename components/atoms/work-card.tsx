@@ -3,6 +3,7 @@ import {classNames} from "../../utils/utils";
 import {useContext, useState} from "react";
 import { Transition } from "@headlessui/react";
 import DarkModeContext from "../../context/mode-context";
+import ThemeContext from "../../context/theme-context/theme-context";
 
 interface WorkCardProps {
     className?: string;
@@ -16,6 +17,7 @@ interface WorkCardProps {
 }
 export const WorkCard = ({isSectionVisible, background, shadowColor, projectLink, className, delay, title}:WorkCardProps) => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme} = useContext(ThemeContext)
     const [product, setProduct] = useState<boolean>(false);
 
     return(
@@ -33,7 +35,8 @@ export const WorkCard = ({isSectionVisible, background, shadowColor, projectLink
                         darkMode ? "text-white" : "text-black")}
                     >{title}</h3>
                 <div
-                    className={classNames("w-full h-44 rounded-lg bg-cover bg-no-repeat p-2 opacity-75 top-0 left-0 z-10 shadow-[4px_9px_15px_0px_rgba(0,0,0,0.3)]",shadowColor, background)}
+                    className={classNames("w-full h-44 rounded-lg bg-cover bg-no-repeat p-2 opacity-75 top-0 left-0 z-10 shadow-md",
+                        theme.shadow ? theme.shadow : "", background)}
                 >
                 </div>
                 <div

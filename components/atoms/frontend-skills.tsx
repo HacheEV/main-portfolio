@@ -7,14 +7,17 @@ import JS from "../../public/assets/logos/js.png";
 import WP from "../../public/assets/logos/wordpress.png";
 import {useContext, useState} from "react";
 import DarkModeContext from "../../context/mode-context";
+import ThemeContext from "../../context/theme-context/theme-context";
 
 export const FrontendSkills = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme} = useContext(ThemeContext)
     const [front, setFront] = useState<boolean>(false)
     return(
         <>
             <div
-                className="flex justify-center items-center absolute z-50 top-0 left-0 ml-4 mt-4 bg-accent-green w-64 h-64 rounded-md origin-bottom hover:transition ease-linear duration-700 hover:scale-110 hover:-rotate-[8deg]"
+                className={classNames("flex justify-center items-center absolute z-50 top-0 left-0 ml-4 mt-4 w-64 h-64 rounded-md origin-bottom hover:transition ease-linear duration-700 hover:scale-110 hover:-rotate-[8deg]",
+                theme.bg ? theme.bg : "")}
                 onMouseEnter={(e) => front ? null : setFront(true)}
                 onMouseLeave={(e) => !front ? null : setFront(false)}
             >

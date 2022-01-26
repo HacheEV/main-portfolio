@@ -11,14 +11,17 @@ import PHP from "../../public/assets/logos/php.svg";
 import Java from "../../public/assets/logos/java.svg";
 import Node from "../../public/assets/logos/node.svg";
 import DarkModeContext from "../../context/mode-context";
+import ThemeContext from "../../context/theme-context/theme-context";
 
 export const BackendSkills = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme} = useContext(ThemeContext)
     const [back, setBack] = useState<boolean>(false)
     return(
         <>
             <div
-                className="flex justify-center items-center absolute z-50 top-64 bg-accent-green w-64 h-64 rounded-md origin-bottom hover:transition duration-700 hover:scale-110 hover:rotate-[9deg]"
+                className={classNames("flex justify-center items-center absolute z-50 top-64 w-64 h-64 rounded-md origin-bottom hover:transition duration-700 hover:scale-110 hover:rotate-[9deg]",
+                theme.bg ? theme.bg : "")}
                 onMouseEnter={(e) => back ? null : setBack(true)}
                 onMouseLeave={(e) => !back ? null : setBack(false)}
             >

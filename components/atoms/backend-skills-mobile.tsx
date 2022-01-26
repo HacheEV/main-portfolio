@@ -6,9 +6,11 @@ import PHP from "../../public/assets/logos/php.svg";
 import Java from "../../public/assets/logos/java.svg";
 import Node from "../../public/assets/logos/node.svg";
 import DarkModeContext from "../../context/mode-context";
+import ThemeContext from "../../context/theme-context/theme-context";
 
 export const BackendSkillsMobile = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {theme} = useContext(ThemeContext)
     const [backend, setBackend] = useState<boolean>(false)
     const handleBackend = () => {
         if (backend) {
@@ -20,7 +22,9 @@ export const BackendSkillsMobile = () => {
     return (
         <>
             <div
-                className="flex justify-center items-center flex-col absolute z-50 top-96 -right-8 mr-0 mt-8 bg-accent-green w-52 h-52 rounded-full origin-bottom">
+                className={classNames("flex justify-center items-center flex-col absolute z-50 top-96 -right-8 mr-0 mt-8 w-52 h-52 rounded-full origin-bottom",
+                        theme.bg ? theme.bg : "")}
+                    >
                 <p className="font-Bebas text-5xl">Backend</p>
                 <button
                     onClick={handleBackend}
