@@ -22,7 +22,7 @@ export const initialState = {
     image:themeAccents.image[0]
 }
 
-export const reducer = (state:any, action:any) =>{
+export const themeReducer = (state:any, action:any) =>{
     switch (action){
         case Colors.GREEN:
             return state = {

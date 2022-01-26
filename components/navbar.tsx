@@ -24,7 +24,7 @@ enum Language {
 
 export const Navbar = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
-    const {theme, dispatch} = useContext(ThemeContext)
+    const {theme, dispatchTheme} = useContext(ThemeContext)
 
     const router = useRouter()
     const [enabled, setEnabled] = useState<boolean>(false)
@@ -183,19 +183,19 @@ export const Navbar = () => {
                                             <div
                                                 className="relative flex flex-col content-center bg-dark-secondary px-5 py-6 gap-8 sm:p-8">
                                                 <p className="text-sm text-white">Tema</p>
-                                                <button onClick={() => dispatch(Colors.GREEN)}>
+                                                <button onClick={() => dispatchTheme(Colors.GREEN)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-green  rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => dispatch(Colors.PINK)}>
+                                                <button onClick={() => dispatchTheme(Colors.PINK)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-pink   rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => dispatch(Colors.RED)}>
+                                                <button onClick={() => dispatchTheme(Colors.RED)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-red  rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => dispatch(Colors.YELLOW)}>
+                                                <button onClick={() => dispatchTheme(Colors.YELLOW)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-yellow   rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
