@@ -3,9 +3,11 @@ import {useRouter} from "next/router";
 import Link from "next/link";
 import {useContext} from "react";
 import DarkModeContext from "../context/mode-context";
+import LanguageContext from "../context/language-context/language-context";
 
 export const Footer = () => {
-    const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {darkMode} = useContext(DarkModeContext)
+    const {language} = useContext(LanguageContext)
     const router = useRouter()
     const path = router.pathname
 
@@ -15,14 +17,14 @@ export const Footer = () => {
                 <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                     <div className="px-5 py-2">
                         <a href={path == "/" ? "#skills" : "/#skills"} className="font-Bebas text-2xl mx-8 hover:text-gray-500">
-                            Skills
+                            {language.navbar[0]}
                         </a>
                         <a href={path == "/" ? "#works" : "/#works"}  className="font-Bebas text-2xl mx-8 hover:text-gray-500">
-                            Works
+                            {language.navbar[1]}
                         </a>
                         <Link href="/contact">
                             <a className="font-Bebas text-2xl mx-8 hover:text-gray-500">
-                                Contact
+                                {language.navbar[2]}
                             </a>
                         </Link>
 

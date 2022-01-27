@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 
 export enum Language {
-    ESP = 'green',
-    EN = 'pink'
+    ESP = 'ESP',
+    EN = 'EN'
 }
 
 const LanguageContext = createContext<any>(Language.ESP);

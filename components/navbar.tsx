@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react'
+import {useContext, useEffect, useState} from 'react'
 import {Switch} from '@headlessui/react'
 import Image from 'next/image'
 import darkLogo from '../public/assets/dark-logo.png'
@@ -15,19 +15,16 @@ import Link from 'next/link';
 import {useRouter} from "next/router";
 import DarkModeContext from "../context/mode-context";
 import ThemeContext, {Colors} from "../context/theme-context/theme-context";
+import LanguageContext, {Language} from "../context/language-context/language-context";
 
-
-enum Language {
-    ESP = 'spanish',
-    EN = 'english'
-}
 
 export const Navbar = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
     const {theme, dispatchTheme} = useContext(ThemeContext)
+    const {language, dispatchLanguage} = useContext(LanguageContext)
+    console.log(language)
 
     const router = useRouter()
-    const [enabled, setEnabled] = useState<boolean>(false)
     const [menu, setMenu] = useState<boolean>(false)
     const [open, setOpen] = useState<boolean>(false)
     const path = router.pathname
@@ -47,7 +44,6 @@ export const Navbar = () => {
             setMenu(true)
         }
     }
-
     return (
         <nav id="top" className={classNames("flex justify-between font-Montserrat text-3xl",
                 darkMode ? "text-white" : "text-black")}
@@ -61,16 +57,16 @@ export const Navbar = () => {
                 <div className="hidden md:flex inline">
                     <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
                                 theme.border ? theme.border : "")}>
-                        <a href={path == "/" ? "#skills" : "/#skills"}> Skills</a>
+                        <a href={path == "/" ? "#skills" : "/#skills"}>{language.navbar[0]}</a>
                     </div>
                     <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
                         theme.border ? theme.border : "")}>
-                        <a href={path == "/" ? "#works" : "/#works"}> Works</a>
+                        <a href={path == "/" ? "#works" : "/#works"}>{language.navbar[1]}</a>
                     </div>
                     <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
                         theme.border ? theme.border : "")}>
                         <Link href="/contact">
-                            <a> Contact</a>
+                            <a>{language.navbar[2]}</a>
                         </Link>
 
                     </div>
@@ -85,14 +81,14 @@ export const Navbar = () => {
                             <div
                                 className="relative flex flex-col content-center bg-dark-secondary h-[20.25rem] px-5 py-6 gap-2">
                                 <div className="py-2 h-14 navbar-link ">
-                                    <a href={path == "/" ? "#skills" : "/#skills"}> Skills</a>
+                                    <a href={path == "/" ? "#skills" : "/#skills"}>{language.navbar[0]}</a>
                                 </div>
                                 <div className="mt-10 mr-4 py-2 h-14 navbar-link">
-                                    <a href={path == "/" ? "#works" : "/#works"}> Works</a>
+                                    <a href={path == "/" ? "#works" : "/#works"}>{language.navbar[1]}</a>
                                 </div>
                                 <div className="mt-10 mr-4 py-2 h-14 navbar-link ">
                                     <Link href="/contact">
-                                        <a> Contact</a>
+                                        <a>{language.navbar[2]}</a>
                                     </Link>
                                 </div>
                             </div>
@@ -107,24 +103,23 @@ export const Navbar = () => {
             <div className="mr-5 md:flex justify-evenly items-center  pt-2 ">
                 {/* LANGUAGE SWITCHER*/}
                 <div className="flex justify-evenly items-center text-sm border-accent-green h-14">
-                    <p>ESP</p>
-                    <Switch
-                        checked={enabled}
-                        onChange={setEnabled}
-                        className='bg-dark-third mx-2 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200'
-
-                    >
-                        <span className="sr-only">Use setting</span>
-                        <span
-                            aria-hidden="true"
-                            className={classNames(
-                                enabled ? 'translate-x-5' : 'translate-x-0',
-                                'pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200'
-                            )}
-                        />
-                    </Switch>
-                    <p>EN</p>
-                </div>
+                    <button
+                        onClick={() => dispatchLanguage(Language.ESP)}
+                        className={classNames("mr-4 mt-1 w-12 h-8 rounded-md shadow-sm",
+                            darkMode ? "bg-dark-secondary text-white active:border-2 border-white focus:border-2 border-white" :
+                            "bg-light-secondary text-black active:border-2 border-black focus:border-2 border-black",
+                            theme.shadow)}>
+                        ESP
+                    </button>
+                    <button
+                        onClick={() => dispatchLanguage(Language.EN)}
+                        className={classNames("mt-1 w-12 h-8 rounded-md shadow-sm",
+                            darkMode ? "bg-dark-secondary text-white active:border-2 border-white focus:border-2 border-white" :
+                                "bg-light-secondary text-black active:border-2 border-black focus:border-2 border-black",
+                            theme.shadow)}>
+                        EN
+                    </button>
+                 </div>
                 <div className="flex justify-evenly items-baseline w-28">
                 {/* HAMBURGER*/}
                     {

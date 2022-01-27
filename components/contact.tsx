@@ -4,10 +4,12 @@ import {useContext} from "react";
 import DarkModeContext from "../context/mode-context";
 import {classNames} from "../utils/utils";
 import ThemeContext from "../context/theme-context/theme-context";
+import LanguageContext from "../context/language-context/language-context";
 
 export const Contact = () => {
-    const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {darkMode} = useContext(DarkModeContext)
     const {theme} = useContext(ThemeContext)
+    const {language} = useContext(LanguageContext)
 
     return (
         <>
@@ -20,8 +22,8 @@ export const Contact = () => {
                         )}
                         >
                     <div className="md:-translate-x-12 lg:-translate-x-32">
-                        <p className="font-Montserrat text-2xl italic font-bold mb-2">Ready to contact me?</p>
-                        <p className="font-Montserrat md:text-2xl lg:text-3xl font-bold">Get start your project now!</p>
+                        <p className="font-Montserrat text-2xl italic font-bold mb-2">{language.contactFirst}</p>
+                        <p className="font-Montserrat md:text-2xl lg:text-3xl font-bold">{language.contactSecond}</p>
                     </div>
                 </div>
                 <div className={classNames("absolute z-20 top-24 right-0 w-[35%] h-[50%] rounded-md translate-x-7 shadow-md lg:translate-x-0",
@@ -34,7 +36,7 @@ export const Contact = () => {
                             darkMode ? "bg-dark-primary text-white shadow-white" : "bg-light-primary text-black shadow-black"
                             )}>
                             <Link href="/contact">
-                                <a> Contact</a>
+                                <a>{language.contactButton}</a>
                             </Link>
                         </button>
                     </div>

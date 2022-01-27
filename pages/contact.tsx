@@ -6,6 +6,7 @@ import {Footer} from "../components/footer";
 import DarkModeContext from "../context/mode-context";
 import {classNames} from "../utils/utils";
 import ThemeContext from "../context/theme-context/theme-context";
+import LanguageContext from "../context/language-context/language-context";
 
 interface contactProps {
     props:any;
@@ -15,6 +16,8 @@ interface contactProps {
 const Contact: NextPage = (props:any) => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
     const {theme} = useContext(ThemeContext)
+    const {language} = useContext(LanguageContext)
+
     return (
             <div className={classNames("grid grid-cols-9 grid-rows-6 grid-flow-col w-full h-screen overflow-x-hidden",
                 darkMode ? "bg-dark-primary" : "bg-light-primary")}>
@@ -37,7 +40,7 @@ const Contact: NextPage = (props:any) => {
                                                 <div className="font-Montserrat grid grid-cols-6 gap-6">
                                                     <div className="col-span-6 sm:col-span-3">
                                                         <label htmlFor="first-name" className="block text-xl">
-                                                            First name
+                                                            {language.contact[0]}
                                                         </label>
                                                         <input
                                                             type="text"
@@ -50,7 +53,7 @@ const Contact: NextPage = (props:any) => {
 
                                                     <div className="col-span-6 sm:col-span-3">
                                                         <label htmlFor="last-name" className="block text-xl ">
-                                                            Last name
+                                                            {language.contact[1]}
                                                         </label>
                                                         <input
                                                             type="text"
@@ -63,7 +66,7 @@ const Contact: NextPage = (props:any) => {
 
                                                     <div className="col-span-6 sm:col-span-3">
                                                         <label htmlFor="email" className="block text-xl ">
-                                                            Email address
+                                                            {language.contact[2]}
                                                         </label>
                                                         <input
                                                             type="email"
@@ -76,7 +79,7 @@ const Contact: NextPage = (props:any) => {
 
                                                     <div className="col-span-6 sm:col-span-3">
                                                         <label htmlFor="reason" className="block text-xl">
-                                                            Reason
+                                                            {language.contact[3]}
                                                         </label>
                                                         <select
                                                             id="reason"
@@ -84,17 +87,15 @@ const Contact: NextPage = (props:any) => {
                                                             autoComplete="reason"
                                                             className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                         >
-                                                            <option>New website</option>
-                                                            <option>Create a digital product</option>
-                                                            <option>Digital transformation</option>
-                                                            <option>Upgrade my website</option>
-                                                            <option>Consultancy</option>
+                                                            {language.contactSelect.map((reason:any) => (
+                                                                <option key={language.contactSelect.indexOf(reason)}>{reason}</option>
+                                                            ))}
                                                         </select>
                                                     </div>
 
                                                     <div className="col-span-6">
                                                         <label htmlFor="message" className="block text-xl">
-                                                            Tell me your idea
+                                                            {language.contact[0]}
                                                         </label>
                                                         <textarea
                                                             rows={4}
@@ -112,7 +113,7 @@ const Contact: NextPage = (props:any) => {
                                                     className={classNames("inline-flex justify-center mt-4 py-2 px-8 border border-transparent shadow-sm font-2xl font-bold tracking-widest rounded-md focus:outline-none focus:ring-2 focus:ring-accent-green",
                                                 darkMode ? "bg-dark-third text-white hover:bg-dark-secondary" : "bg-light-third text-black hover:bg-light-secondary")}
                                                 >
-                                                    Send
+                                                    {language.contactButton}
                                                 </button>
                                             </div>
                                         </div>
