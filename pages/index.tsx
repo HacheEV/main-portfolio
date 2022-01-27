@@ -15,7 +15,7 @@ import {classNames} from "../utils/utils";
 import ThemeContext from "../context/theme-context/theme-context";
 
 const Home: NextPage = () => {
-    const {darkMode, setDarkMode} = useContext(DarkModeContext)
+    const {darkMode} = useContext(DarkModeContext)
     const {theme} = useContext(ThemeContext)
     return (
             <div className={classNames("grid grid-cols-9 grid-rows-6 grid-flow-col w-full h-screen overflow-x-hidden",
@@ -38,19 +38,21 @@ const Home: NextPage = () => {
                     <div className={classNames("flex flex-col justify-end col-span-1",
                             darkMode ? "bg-dark-primary" : "bg-light-primary")}
                         >
-                        <div className="ml-[0.7rem] mb-8 md:mb-12 md:ml-[3.8rem] lg:mb-[4.5rem] lg:ml-[3.6rem] w-auto">
-                            <Link href="#top">
-                                <a>
-                                    <FontAwesomeIcon className={classNames(theme.text , "text-4xl")} icon={faArrowCircleUp} />
-                                </a>
-                            </Link>
+                        <div className="flex flex-col w-80 justify-evenly">
+                            <div className="ml-[0.7rem] mb-8 md:mb-12 md:ml-[3.8rem] lg:mb-[4.5rem] lg:ml-[3.6rem]">
+                                <Link href="#top">
+                                    <a>
+                                        <FontAwesomeIcon className={classNames(theme.text , "text-3xl ml-2 sm:text-4xl md:ml-3 lg:ml-5")} icon={faArrowCircleUp} />
+                                    </a>
+                                </Link>
+                            </div>
+                            <div  className={classNames(theme.text, "w-64 h-12 text-xl font-Montserrat rotate-90 mb-28 mt-20 -translate-x-[6.4rem] md:mt-16 md:-translate-x-[2.8rem] lg:mt-12 lg:-translate-x-[2.7rem]")}>
+                                <p>hector@hevprojects.com</p>
+                            </div>
                         </div>
 
-                        <div className={classNames(theme.text, "text-xl font-Montserrat rotate-90 mb-52 md:mb-52 md:ml-8 lg:mb-44 lg:ml-0")}>
-                            <p >hector@hevprojects.com</p>
-                        </div>
-                        <div className={classNames("mt-4 h-[10%] ml-8 md:h-[15%] md:ml-[5.2rem] border-l-[5px]",
-                            theme.border ? theme.border : "")}></div>
+                            <div className={classNames("mt-4 h-[10%] ml-8 md:h-[15%] md:ml-[5.8rem] border-l-[5px]",
+                                theme.border ? theme.border : "")}></div>
                     </div>
                 </div>
             </div>

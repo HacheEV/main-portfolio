@@ -22,7 +22,6 @@ export const Navbar = () => {
     const {darkMode, setDarkMode} = useContext(DarkModeContext)
     const {theme, dispatchTheme} = useContext(ThemeContext)
     const {language, dispatchLanguage} = useContext(LanguageContext)
-    console.log(language)
 
     const router = useRouter()
     const [menu, setMenu] = useState<boolean>(false)
