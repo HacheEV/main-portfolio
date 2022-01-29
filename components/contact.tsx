@@ -43,15 +43,19 @@ export const Contact = () => {
                 </div>
             </div>
             {/*MOBILE*/}
-            <div className="block w-[87%] p-6 my-14 mx-5 flex flex-col bg-dark-third rounded-md md:hidden">
-                <div className="w-[27ch] my-4 text-center">
-                    <p className="font-Montserrat text-3xl text-white italic font-bold mb-2">Ready to contact me?</p>
-                    <p className="font-Montserrat text-4xl text-white font-bold">Get start your project now!</p>
+            <div className="block w-[88%] p-6 my-14 flex flex-col bg-dark-third rounded-md ml-10 relative z-50 sm:w-[85%] md:hidden">
+                <div className="my-2 ml-0 sm:-ml-2 text-center sm:">
+                    <p className={classNames("font-Montserrat italic font-bold mb-2 text-2xl",
+                            darkMode ? "text-white" : "text-black"
+                        )}>{language.contactFirst}</p>
+                    <p className={classNames("font-Montserrat italic font-bold mb-2 text-3xl",
+                        darkMode ? "text-white" : "text-black"
+                    )}>{language.contactSecond}</p>
                 </div>
                 <div className="flex justify-center">
-                    <button className="rounded-lg bg-dark-primary font-Montserrat text-2xl text-white font-bold tracking-[0.15em] w-44 h-14 mt-4 shadow-sm shadow-white">
+                    <button className="rounded-lg bg-dark-primary font-Montserrat text-xl text-white font-bold tracking-[0.15em] w-36 h-12 mt-4 shadow-sm shadow-white">
                         <Link href="/contact">
-                            <a> Contact</a>
+                            <a>{language.contactButton}</a>
                         </Link>
                     </button>
 

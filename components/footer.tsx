@@ -4,6 +4,7 @@ import Link from "next/link";
 import {useContext} from "react";
 import DarkModeContext from "../context/mode-context";
 import LanguageContext from "../context/language-context/language-context";
+import {classNames} from "../utils/utils";
 
 export const Footer = () => {
     const {darkMode} = useContext(DarkModeContext)
@@ -12,18 +13,18 @@ export const Footer = () => {
     const path = router.pathname
 
     return (
-        <footer className={darkMode ? "bg-dark-primary text-white" : "bg-light-primary text-black"}>
-            <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-                <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
-                    <div className="px-5 py-2">
-                        <a href={path == "/" ? "#skills" : "/#skills"} className="font-Bebas text-2xl mx-8 hover:text-gray-500">
+        <footer className={classNames("ml-10 relative z-50", darkMode ? "bg-dark-primary text-white" : "bg-light-primary text-black")}>
+            <div className="py-12 px-4 text-xl sm:px-6 lg:px-8">
+                <nav className="flex justify-center" aria-label="Footer">
+                    <div>
+                        <a href={path == "/" ? "#skills" : "/#skills"} className="text-xl font-Bebas mx-2 sm:mx-4 sm:text-2xl hover:text-gray-500">
                             {language.navbar[0]}
                         </a>
-                        <a href={path == "/" ? "#works" : "/#works"}  className="font-Bebas text-2xl mx-8 hover:text-gray-500">
+                        <a href={path == "/" ? "#works" : "/#works"}  className="text-xl font-Bebas mx-2 sm:mx-4 sm:text-2xl hover:text-gray-500">
                             {language.navbar[1]}
                         </a>
                         <Link href="/contact">
-                            <a className="font-Bebas text-2xl mx-8 hover:text-gray-500">
+                            <a className="text-xl font-Bebas mx-2 sm:mx-4 sm:text-2xl hover:text-gray-500">
                                 {language.navbar[2]}
                             </a>
                         </Link>

@@ -77,11 +77,13 @@ export const Navbar = () => {
                 { menu ? (
                         <div className="relative h-10 w-6 mt-1 -mr-2">
                     <div
-                        className="absolute flex flex-col place-content-evenly  z-50 left-0 transform -translate-x-[55%] translate-y-[6.75rem] mt-3 px-2 w-60">
+                        className="absolute flex flex-col place-content-evenly z-50 transform -translate-x-24 translate-y-[7.3rem] mt-3 px-2 w-60">
                         <div
-                            className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                            className="relative z-50 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                             <div
-                                className="relative flex flex-col content-center bg-dark-secondary h-[20.25rem] px-5 py-6 gap-2">
+                                className={classNames("flex flex-col content-center text-2xl h-[20.1rem] px-5 py-6 gap-2",
+                                    darkMode ? "bg-dark-secondary text-white" : "bg-light-secondary text-black"
+                                )}>
                                 <div className="py-2 h-14 navbar-link ">
                                     <a href={path == "/" ? "#skills" : "/#skills"}>{language.navbar[0]}</a>
                                 </div>
@@ -129,14 +131,18 @@ export const Navbar = () => {
                                 onClick={() => handleMenu()}
                             >
                                 <FontAwesomeIcon
-                                    className="display-block text-white text-2xl h-6 w-6 mr-2 md:hidden" icon={faBars}/>
+                                    className={classNames("display-block text-2xl h-6 w-6 mr-2 md:hidden",
+                                        darkMode ? "text-white" : "text-black"
+                                    )} icon={faBars}/>
                             </button>
 
                         ) : (<button
                             onClick={() => handleMenu()}
                         >
                             <FontAwesomeIcon
-                                className="display-block text-white text-2xl h-6 w-6 mr-2 md:hidden" icon={faTimes}/>
+                                className={classNames("display-block text-2xl h-6 w-6 mr-2 md:hidden",
+                                    darkMode ? "text-white" : "text-black"
+                                )} icon={faTimes}/>
                         </button>)
                     }
                     {/* DARK MODE SWITCHER*/}
@@ -160,8 +166,8 @@ export const Navbar = () => {
                                     className='group rounded-md inline-flex items-center text-base '
                                 >
                                     {darkMode ? <FontAwesomeIcon
-                                        className="text-light-primary" icon={faCog}/> : <FontAwesomeIcon
-                                        className="text-dark-primary" icon={faCog}/>}
+                                        className="text-light-primary text-xl" icon={faCog}/> : <FontAwesomeIcon
+                                        className="text-dark-primary text-xl" icon={faCog}/>}
                                 </Popover.Button>
 
                                 <Transition
@@ -174,12 +180,14 @@ export const Navbar = () => {
                                     leaveTo="opacity-0 translate-y-1"
                                 >
                                     <Popover.Panel
-                                        className="absolute flex flex-col place-content-evenly  z-50 left-0 transform -translate-x-[55%] translate-y-2 mt-3 px-2 w-[5.65rem] md:w-28">
+                                        className="absolute flex flex-col place-content-evenly  z-50 left-0 transform -translate-x-[55%] translate-y-2 mt-3 px-2 w-[5.65rem] sm:w-[6.5rem]">
                                         <div
                                             className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                             <div
-                                                className="relative flex flex-col content-center bg-dark-secondary px-5 py-6 gap-8 sm:p-8">
-                                                <p className="text-sm text-white">Tema</p>
+                                                className={classNames("relative flex flex-col content-center bg-dark-secondary px-5 py-6 gap-8 sm:p-8",
+                                                    darkMode ? "bg-dark-secondary text-white" : "bg-light-secondary text-black"
+                                                )}>
+                                                <p className="text-sm">Tema</p>
                                                 <button onClick={() => dispatchTheme(Colors.GREEN)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-green  rounded-full hover:border-4 hover:border-white"></div>

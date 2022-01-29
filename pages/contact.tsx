@@ -30,13 +30,13 @@ const Contact: NextPage = (props:any) => {
                     <Navbar/>
                 </div>
                 <div className=" row-span-5 col-span-9 grid grid-cols-6">
-                    <div className={classNames("col-span-6", darkMode ? "bg-dark-primary text-white" : "bg-light- text-black")}>
+                    <div className={classNames("col-span-6", darkMode ? "bg-dark-primary text-white" : "bg-light-primary text-black")}>
                         <div className="mt-10 sm:mt-0">
                             <div className="md:grid md:grid-cols-3 md:gap-6">
                                 <div className="mt-5 md:mt-0 md:col-span-3">
                                     <form action="https://formsubmit.co/hector@hevprojects.com" method="POST">
                                         <div className="p-4 shadow overflow-hidden">
-                                            <div className={classNames("px-4 rounded-md rounded-md shadow-sm sm:p-6", darkMode ? "bg-dark-secondary shadow-white" : "bg-light-secondary shadow-black")}>
+                                            <div className={classNames("px-4 rounded-md rounded-md sm:p-6", darkMode ? "bg-dark-primary shadow-white" : "bg-light-primary shadow-black")}>
                                                 <div className="font-Montserrat grid grid-cols-6 gap-6">
                                                     <div className="col-span-6 sm:col-span-3">
                                                         <label htmlFor="first-name" className="block text-xl">
@@ -85,7 +85,7 @@ const Contact: NextPage = (props:any) => {
                                                             id="reason"
                                                             name="reason"
                                                             autoComplete="reason"
-                                                            className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                            className="mt-1 text-black focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                         >
                                                             {language.contactSelect.map((reason:any) => (
                                                                 <option key={language.contactSelect.indexOf(reason)}>{reason}</option>
@@ -95,7 +95,7 @@ const Contact: NextPage = (props:any) => {
 
                                                     <div className="col-span-6">
                                                         <label htmlFor="message" className="block text-xl">
-                                                            {language.contact[0]}
+                                                            {language.contact[4]}
                                                         </label>
                                                         <textarea
                                                             rows={4}
