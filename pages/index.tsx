@@ -41,9 +41,10 @@ const Home: NextPage = () => {
                         <div className="flex flex-col w-80 justify-evenly">
                             <div className="ml-[0.7rem] mb-8 md:mb-12 md:ml-[3.8rem] lg:mb-[4.5rem] lg:ml-[3.6rem]">
                                 <Link href="#top">
-                                    <a>
-                                        <FontAwesomeIcon className={classNames(theme.text , "text-3xl ml-2 sm:text-4xl md:ml-3 lg:ml-5")} icon={faArrowCircleUp} />
-                                    </a>
+
+                                        <a className="scroll-smooth">
+                                            <FontAwesomeIcon className={classNames(theme.text , "text-3xl ml-2 sm:text-4xl md:ml-3 lg:ml-5")} icon={faArrowCircleUp} />
+                                        </a>
                                 </Link>
                             </div>
                             <div  className={classNames(theme.text, "w-64 h-12 text-xl font-Montserrat rotate-90 mb-28 mt-20 -translate-x-[6.4rem] md:mt-16 md:-translate-x-[2.8rem] lg:mt-12 lg:-translate-x-[2.7rem]")}>

@@ -47,7 +47,7 @@ const Contact: NextPage = (props:any) => {
                                                             name="first-name"
                                                             id="first-name"
                                                             autoComplete="given-name"
-                                                            className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                            className="text-black mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                         />
                                                     </div>
 
@@ -60,7 +60,7 @@ const Contact: NextPage = (props:any) => {
                                                             name="last-name"
                                                             id="last-name"
                                                             autoComplete="family-name"
-                                                            className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                            className="text-black mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                         />
                                                     </div>
 
@@ -73,7 +73,7 @@ const Contact: NextPage = (props:any) => {
                                                             name="email"
                                                             id="email"
                                                             autoComplete="email"
-                                                            className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                            className="text-black mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                         />
                                                     </div>
 
@@ -85,7 +85,7 @@ const Contact: NextPage = (props:any) => {
                                                             id="reason"
                                                             name="reason"
                                                             autoComplete="reason"
-                                                            className="mt-1 text-black focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                            className="text-black mt-1 text-black focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                         >
                                                             {language.contactSelect.map((reason:any) => (
                                                                 <option key={language.contactSelect.indexOf(reason)}>{reason}</option>
@@ -101,7 +101,7 @@ const Contact: NextPage = (props:any) => {
                                                             rows={4}
                                                             name="message"
                                                             id="message"
-                                                            className="mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                                            className="text-black mt-1 focus:ring-accent-green focus:border-accent-green block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                                                             defaultValue={''}
                                                         />
                                                     </div>
