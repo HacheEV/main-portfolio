@@ -25,12 +25,10 @@ export const Works = () => {
                      ref={ref}
                 >
                     {/*FIRST ROW*/}
-                    {/*TODO ASK VICTOR WICH RESPONSIVE FOLLOW*/}
-                    <div id="1" className="col-span-2 w-72 h-56 lg:col-span-3">
+                    <div id="1" className="col-span-2 w-72 h-56 md:mt-36 lg:col-span-3 lg:mt-0">
                         <WorkCard isSectionVisible={isSectionVisible} delay="delay-100"
                                   background="bg-Hidreco"
                                   projectLink="https://www.hidreco.es"
-                                  shadowColor="shadow-accent-green"
                                   title="Hidreco"
                         />
                     </div>
@@ -41,7 +39,6 @@ export const Works = () => {
                         <WorkCard isSectionVisible={isSectionVisible} delay="delay-300"
                                   background="bg-Render"
                                   projectLink="https://renderprops.vercel.app/"
-                                  shadowColor="shadow-accent-green"
                                   title="RenderProps"
                                   className="md:translate-x-80 lg:translate-x-0"
                         />
@@ -57,7 +54,6 @@ export const Works = () => {
                         <WorkCard isSectionVisible={isSectionVisible} delay="delay-500"
                                   background="bg-David"
                                   projectLink="https://www.davidestevepastisseria.es/"
-                                  shadowColor="shadow-accent-green"
                                   title="David Esteve"
                         />
                     </div>
@@ -68,7 +64,6 @@ export const Works = () => {
                         <WorkCard isSectionVisible={isSectionVisible} delay="delay-[700ms]"
                                   background="bg-Blackvil"
                                   projectLink="https://blackviltattoo.com/"
-                                  shadowColor="shadow-accent-green"
                                   title="Blackvil Tattoo"
                                   className="md:translate-x-80 lg:translate-x-0"
                         />

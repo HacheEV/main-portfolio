@@ -18,10 +18,10 @@ export const Hero = () => {
                 >
             <div className="relative -mr-40 -mt-12">
                 <div
-                    className="absolute w-[13rem] bottom-28 left-20 md:w-[18rem] md:bottom-30 md:left-24 lg:w-[21rem] lg:-top-16">
+                    className="absolute bottom-28 left-20 w-[10.5rem] sm:w-[13rem] md:w-[18rem] md:bottom-30 md:left-24 lg:w-[21rem] lg:-top-16">
                     <Image src={MySelf}/>
                 </div>
-                <div className="ml-6 w-[21rem] md:w-[27.5rem] md:ml-8 md:mt-10 md:mr-6 lg:w-[32rem] lg:mt-2">
+                <div className="ml-6 w-[19rem] sm:w-[21rem] md:w-[27.5rem] md:ml-8 md:mt-10 md:mr-6 lg:w-[32rem] lg:mt-2">
                     <Image src={theme ? theme.image : null}
                            className="hover:scale-[96%] hover:transition-transform hover:duration-300"></Image>
                 </div>

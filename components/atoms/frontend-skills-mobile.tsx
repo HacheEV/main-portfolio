@@ -36,25 +36,25 @@ export const FrontendSkillsMobile = () => {
                 </button>
             </div>
             <div className={classNames("absolute w-20 h-20 z-20 top-8 left-40",
-                front ? "transition duration-[800ms] translate-x-16 -translate-y-20" :
+                front ? "transition duration-[800ms] translate-x-12 -translate-y-16" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
                 <Image src={React}/>
             </div>
-            <div className={classNames("absolute w-16 h-16 z-20 top-8 left-44",
-                front ? "transition duration-[800ms] translate-x-16 translate-y-6" :
+            <div className={classNames("absolute w-14 h-14 z-20 top-8 left-44",
+                front ? "transition duration-[800ms] translate-x-16 translate-y-8" :
                     "transition duration-[850ms] ease-in -translate-x-16 translate-y-6",
                 darkMode ? "invert" : "")}>
                 <Image src={Html}/>
             </div>
-            <div className={classNames("absolute w-16 h-16 z-20 top-8 left-44",
+            <div className={classNames("absolute w-14 h-14 z-20 top-8 left-44",
                 front ? "transition duration-[800ms] translate-x-16 translate-y-32" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
                 <Image src={CSS}/>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-8 left-44",
-                front ? "transition duration-[800ms] -translate-x-2 translate-y-52" :
+                front ? "transition duration-[800ms] translate-x-2 translate-y-52" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
                 <Image src={JS}/>

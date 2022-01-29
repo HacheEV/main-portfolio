@@ -27,7 +27,7 @@ export const DevopsSkillsMobile = () => {
     return(
         <>
             <div
-                className={classNames("flex justify-center items-center flex-col absolute z-50 top-[45rem] -left-4 ml-4 mt-8 w-52 h-52 rounded-full origin-bottom",
+                className={classNames("flex justify-center items-center flex-col absolute z-50 top-[45rem] -left-4 ml-6 mt-8 w-52 h-52 rounded-full origin-bottom",
                         theme.bg ? theme.bg : "")}
 
             >
@@ -40,25 +40,25 @@ export const DevopsSkillsMobile = () => {
                 </button>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-[45rem] left-44",
-                devops ? "transition duration-[800ms] translate-x-12 -translate-y-6" :
+                devops ? "transition duration-[800ms] -translate-x-2 -translate-y-6" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
                 <Image src={Docker}/>
             </div>
-            <div className={classNames("absolute w-16 h-16 z-20 top-[45rem] left-44",
-                devops ? "transition duration-[800ms] translate-x-[4.5rem] translate-y-24" :
+            <div className={classNames("absolute w-14 h-14 z-20 top-[45rem] left-44",
+                devops ? "transition duration-[800ms] translate-x-[3.5rem] translate-y-24" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
                 <Image src={Git}/>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-[45rem] left-44",
-                devops ? "transition duration-[800ms] translate-x-12 translate-y-52" :
+                devops ? "transition duration-[800ms] translate-x-6 translate-y-52" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
                 <Image src={Jira}/>
             </div>
             <div className={classNames("absolute w-32 h-32 z-20 top-[46rem] left-40",
-                devops ? "transition duration-[800ms] -translate-x-28 translate-y-72" :
+                devops ? "transition duration-[800ms] -translate-x-28 translate-y-64" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "" : "invert")}>
                 <Image src={Cypress}/>

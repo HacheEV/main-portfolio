@@ -16,6 +16,7 @@ import {useRouter} from "next/router";
 import DarkModeContext from "../context/mode-context";
 import ThemeContext, {Colors} from "../context/theme-context/theme-context";
 import LanguageContext, {Language} from "../context/language-context/language-context";
+import {useMedia} from "react-use";
 
 
 export const Navbar = () => {
@@ -44,7 +45,7 @@ export const Navbar = () => {
         }
     }
     return (
-        <nav id="top" className={classNames("flex justify-between font-Montserrat text-3xl",
+        <nav id="top" className={classNames("flex justify-between font-Montserrat",
                 darkMode ? "text-white" : "text-black")}
             >
             <div className="flex">
@@ -53,7 +54,9 @@ export const Navbar = () => {
                         <Image className="cursor-pointer" src={darkMode ? darkLogo : lightLogo} width={125} height={100}/>
                     </Link>
                 </div>
-                <div className="hidden md:flex inline">
+                <div className={classNames("hidden md:flex inline p-2",
+                    language.language == 'ESP' ? "md:text-xl lg:text-3xl" : "md:text-2xl lg:text-3xl")}
+                >
                     <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
                                 theme.border ? theme.border : "")}>
                         <a href={path == "/" ? "#skills" : "/#skills"}>{language.navbar[0]}</a>
@@ -116,7 +119,7 @@ export const Navbar = () => {
                             darkMode ? "bg-dark-secondary text-white active:border-2 border-white focus:border-2 border-white" :
                                 "bg-light-secondary text-black active:border-2 border-black focus:border-2 border-black",
                             theme.shadow)}>
-                        EN
+                        ENG
                     </button>
                  </div>
                 <div className="flex justify-evenly items-baseline w-28">
@@ -150,7 +153,7 @@ export const Navbar = () => {
 
                     </button>
                     {/* THEME SETTINGS y*/}
-                    <Popover className="relative h-10 w-6 mt-1 -mr-2">
+                    <Popover className="relative h-10 w-6 mt-1 -mr-2 pt-4">
                         {({open}) => (
                             <>
                                 <Popover.Button

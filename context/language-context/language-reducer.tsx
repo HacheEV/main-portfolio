@@ -3,6 +3,7 @@ import {Language} from "./language-context";
 
 const language = {
     ESP: {
+        language: 'ESP',
         hero: "Hola soy Hector. Desarrollador ubicado en España. Creador de productos digitales.\n" +
             "Amante de las últimas tecnologías en busca de la mejor experiencia.",
         heroButton: "Currículum",
@@ -14,6 +15,7 @@ const language = {
         contactSelect: ["Nueva web", "Crear un producto digital", "Transformación digital", "Mejorar mi web", "Consultoría" ]
     },
     EN: {
+        language: 'ENG',
         hero: "Hi, I'm Hector. Developer located in Spain. Creator of digital products.\n" +
         "Lover of the latest technologies in search of the best experience.",
         heroButton: "Resume",
