@@ -35,8 +35,8 @@ const Contact: NextPage = (props:any) => {
                             <div className="md:grid md:grid-cols-3 md:gap-6">
                                 <div className="mt-5 md:mt-0 md:col-span-3">
                                     <form action="https://formsubmit.co/hector@hevprojects.com" method="POST">
-                                        <div className="p-4 shadow overflow-hidden">
-                                            <div className={classNames("px-4 rounded-md rounded-md sm:p-6", darkMode ? "bg-dark-primary shadow-white" : "bg-light-primary shadow-black")}>
+                                        <div className="p-4 overflow-hidden">
+                                            <div className={classNames("px-4 rounded-md rounded-md sm:p-6", darkMode ? "bg-dark-primary" : "bg-light-primary")}>
                                                 <div className="font-Montserrat grid grid-cols-6 gap-6">
                                                     <div className="col-span-6 sm:col-span-3">
                                                         <label htmlFor="first-name" className="block text-xl">
