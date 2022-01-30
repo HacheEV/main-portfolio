@@ -25,7 +25,7 @@ export const Works = () => {
                      ref={ref}
                 >
                     {/*FIRST ROW*/}
-                    <div id="1" className="col-span-2 w-72 h-56 md:mt-36 lg:col-span-3 lg:mt-0">
+                    <div id="1" className="col-span-2 w-72 h-56 mt-36 md:mt-36 lg:col-span-3 lg:mt-0">
                         <WorkCard isSectionVisible={isSectionVisible} delay="delay-100"
                                   background="bg-Hidreco"
                                   projectLink="https://www.hidreco.es"
