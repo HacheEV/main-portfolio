@@ -16,6 +16,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
+                    <link href="/static/favicon.ico" rel="shortcut icon"/>
                     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
                     <link
                         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,200;0,400;1,200;1,400&display=swap"
