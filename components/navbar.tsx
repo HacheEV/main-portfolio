@@ -55,13 +55,13 @@ export const Navbar = () => {
                     </Link>
                 </div>
                 <div className={classNames("hidden md:flex inline p-2",
-                    language.language == 'ESP' ? "md:text-xl lg:text-3xl" : "md:text-2xl lg:text-3xl")}
+                    language.language == 'ESP' ? "md:text-xl lg:text-2xl" : "md:text-2xl lg:text-2xl")}
                 >
-                    <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
+                    <div className={classNames("mt-10 mr-8 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
                                 theme.border ? theme.border : "")}>
                         <a href={path == "/" ? "#skills" : "/#skills"}>{language.navbar[0]}</a>
                     </div>
-                    <div className={classNames("mt-10 mr-4 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
+                    <div className={classNames("mt-10 mr-8 py-2 h-14 hover:border-b-8 hover:transition-all duration-[850ms]",
                         theme.border ? theme.border : "")}>
                         <a href={path == "/" ? "#works" : "/#works"}>{language.navbar[1]}</a>
                     </div>
