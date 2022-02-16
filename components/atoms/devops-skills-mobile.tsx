@@ -33,6 +33,7 @@ export const DevopsSkillsMobile = () => {
             >
                 <p className="font-Bebas text-5xl">Devops</p>
                 <button
+                    aria-label="Push to see DevOps skills"
                     onClick={handleFrontend}
                     className="bg-dark-third text-white mt-5 rounded-full p-2 animate-pulse"
                 >
@@ -43,25 +44,25 @@ export const DevopsSkillsMobile = () => {
                 devops ? "transition duration-[800ms] -translate-x-2 -translate-y-6" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Docker}/>
+                <Image alt="Docker Logo" src={Docker}/>
             </div>
             <div className={classNames("absolute w-14 h-14 z-20 top-[45rem] left-44",
                 devops ? "transition duration-[800ms] translate-x-[3.5rem] translate-y-24" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Git}/>
+                <Image alt="Git Logo" src={Git}/>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-[45rem] left-44",
                 devops ? "transition duration-[800ms] translate-x-6 translate-y-52" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Jira}/>
+                <Image alt="Jira Logo" src={Jira}/>
             </div>
             <div className={classNames("absolute w-32 h-32 z-20 top-[46rem] left-40",
                 devops ? "transition duration-[800ms] -translate-x-28 translate-y-64" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "" : "invert")}>
-                <Image src={Cypress}/>
+                <Image alt="Cypress Logo" src={Cypress}/>
             </div>
         </>
 
