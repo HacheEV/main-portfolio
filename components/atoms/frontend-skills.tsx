@@ -28,31 +28,31 @@ export const FrontendSkills = () => {
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : ""
                 )}>
-                <Image src={React}/>
+                <Image alt="React logo" src={React}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] translate-x-60" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Html}/>
+                <Image alt="Html logo" src={Html}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] translate-x-60 translate-y-32" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={CSS}/>
+                <Image alt="CSS logo" src={CSS}/>
             </div>
             <div className={classNames("absolute w-24 h-24 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] translate-x-[9.5rem] translate-y-72" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={JS}/>
+                <Image alt="JS logo" src={JS}/>
             </div>
             <div className={classNames("absolute w-24 h-24 z-20 top-4 left-36",
                 front ? "transition duration-[800ms] -translate-x-[1rem] translate-y-80" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={WP}/>
+                <Image alt="Wordpress logo" src={WP}/>
             </div>
         </>
 

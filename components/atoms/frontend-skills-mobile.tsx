@@ -29,6 +29,7 @@ export const FrontendSkillsMobile = () => {
             >
                 <p className="font-Bebas text-5xl">Frontend</p>
                 <button
+                    aria-label="Push to see frontend skills"
                     onClick={handleFrontend}
                     className="bg-dark-third text-white mt-5 rounded-full p-2 animate-pulse"
                 >
@@ -39,31 +40,31 @@ export const FrontendSkillsMobile = () => {
                 front ? "transition duration-[800ms] translate-x-12 -translate-y-16" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={React}/>
+                <Image alt="React logo" src={React}/>
             </div>
             <div className={classNames("absolute w-14 h-14 z-20 top-8 left-44",
                 front ? "transition duration-[800ms] translate-x-16 translate-y-8" :
                     "transition duration-[850ms] ease-in -translate-x-16 translate-y-6",
                 darkMode ? "invert" : "")}>
-                <Image src={Html}/>
+                <Image alt="HTML logo" src={Html}/>
             </div>
             <div className={classNames("absolute w-14 h-14 z-20 top-8 left-44",
                 front ? "transition duration-[800ms] translate-x-16 translate-y-32" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={CSS}/>
+                <Image alt="CSS logo" src={CSS}/>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-8 left-44",
                 front ? "transition duration-[800ms] translate-x-2 translate-y-52" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={JS}/>
+                <Image alt="JS logo" src={JS}/>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-8 left-44",
                 front ? "transition duration-[800ms] -translate-x-20 translate-y-60" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={WP}/>
+                <Image alt="Wordpress logo" src={WP}/>
             </div>
         </>
 

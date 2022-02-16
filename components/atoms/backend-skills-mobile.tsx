@@ -27,6 +27,7 @@ export const BackendSkillsMobile = () => {
                     >
                 <p className="font-Bebas text-5xl">Backend</p>
                 <button
+                    aria-label="Push to see the backend skills"
                     onClick={handleBackend}
                     className="bg-dark-third text-white mt-5 rounded-full p-2 animate-pulse"
                 >
@@ -37,25 +38,25 @@ export const BackendSkillsMobile = () => {
                 backend ? "transition duration-[800ms] -translate-x-52 -translate-y-12" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Python}/>
+                <Image alt="Python logo" src={Python}/>
             </div>
             <div className={classNames("absolute w-16 h-16 z-20 top-[25.5rem] -right-16",
                 backend ? "transition duration-[800ms] -translate-x-[14rem] translate-y-12" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={PHP}/>
+                <Image alt="PHP logo" src={PHP}/>
             </div>
             <div className={classNames("absolute w-14 h-14 z-20 top-[25.5rem] -right-16",
                 backend ? "transition duration-[800ms] -translate-x-[14rem] translate-y-32" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Java}/>
+                <Image alt="Java logo" src={Java}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-24 top-[25.5rem] -right-16",
                 backend ? "transition duration-[800ms] -translate-x-[10.5rem] translate-y-56" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Node}/>
+                <Image alt="Node logo" src={Node}/>
             </div>
         </>
     )

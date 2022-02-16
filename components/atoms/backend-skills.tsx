@@ -31,25 +31,25 @@ export const BackendSkills = () => {
                 back ? "transition duration-[800ms] -translate-x-72 -translate-y-28" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Python}/>
+                <Image alt="Python logo" src={Python}/>
             </div>
             <div className={classNames("absolute w-28 h-28 z-20 top-60 -right-4",
                 back ? "transition duration-[800ms] -translate-x-[22rem] translate-y-12" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={PHP}/>
+                <Image alt="PHP logo" src={PHP}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-20 top-60 -right-4",
                 back ? "transition duration-[800ms] -translate-x-[23rem] translate-y-44" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Java}/>
+                <Image alt="Java logo" src={Java}/>
             </div>
             <div className={classNames("absolute w-24 h-20 z-24 top-60 -right-4",
                 back ? "transition duration-[800ms] -translate-x-[20rem] translate-y-80" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Node}/>
+                <Image alt="Node logo" src={Node}/>
             </div>
         </>
 

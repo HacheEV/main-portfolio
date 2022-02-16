@@ -51,7 +51,7 @@ export const Navbar = () => {
             <div className="flex">
                 <div className="mt-3 ml-2 mr-3 scale-[78%] md:mt-4 md:scale-[100%]">
                     <Link href="/" >
-                        <Image className="cursor-pointer" src={darkMode ? darkLogo : lightLogo} width={125} height={100}/>
+                        <Image alt="HEV projects logo "className="cursor-pointer" src={darkMode ? darkLogo : lightLogo} width={125} height={100}/>
                     </Link>
                 </div>
                 <div className={classNames("hidden md:flex inline p-2",
@@ -168,6 +168,7 @@ export const Navbar = () => {
                         {({open}) => (
                             <>
                                 <Popover.Button
+                                    aria-label="Theme settings button"
                                     className='group rounded-md inline-flex items-center text-base '
                                 >
                                     {darkMode ? <FontAwesomeIcon

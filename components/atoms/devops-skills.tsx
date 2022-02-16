@@ -31,25 +31,25 @@ export const DevopsSkills = () => {
                 devops ? "transition duration-[800ms] translate-x-32 -translate-y-6" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Docker}/>
+                <Image alt="Docker logo" src={Docker}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-20 top-[33rem] left-44",
                 devops ? "transition duration-[800ms] translate-x-36 translate-y-24" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Git}/>
+                <Image alt="Git logo" src={Git}/>
             </div>
             <div className={classNames("absolute w-20 h-20 z-20 top-[33rem] left-44",
                 devops ? "transition duration-[800ms] translate-x-32 translate-y-60" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "invert" : "")}>
-                <Image src={Jira}/>
+                <Image alt="Jira logo" src={Jira}/>
             </div>
             <div className={classNames("absolute w-40 h-40 z-20 top-[33rem] left-44",
                 devops ? "transition duration-[800ms] -translate-x-20 translate-y-80" :
                     "transition duration-[850ms] ease-in -translate-x-32 translate-y-12",
                 darkMode ? "" : "invert")}>
-                <Image src={Cypress}/>
+                <Image alt="Cypress logo" src={Cypress}/>
             </div>
 
         </>

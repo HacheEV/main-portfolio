@@ -30,9 +30,9 @@ export const WorkCard = ({isSectionVisible, background, projectLink, className, 
                  onMouseEnter={(e) => product ? null : setProduct(true)}
                  onMouseLeave={(e) => !product ? null : setProduct(false)}
             >
-                <h3 className={classNames("font-Montserrat text-2xl font-semibold ml-8 mb-2",
+                <h2 className={classNames("font-Montserrat text-2xl font-semibold ml-8 mb-2",
                         darkMode ? "text-white" : "text-black")}
-                    >{title}</h3>
+                    >{title}</h2>
                 <div
                     className={classNames("w-full h-44 rounded-lg bg-cover bg-center bg-no-repeat bg-clip-padding p-4 opacity-75 top-0 left-0 z-10 shadow-md md:h-52 lg:h-60",
                         theme.shadow ? theme.shadow : "", background)}

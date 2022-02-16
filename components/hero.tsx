@@ -19,16 +19,16 @@ export const Hero = () => {
             <div className="relative -mr-40 -mt-12">
                 <div
                     className="absolute bottom-28 left-20 w-[10.5rem] sm:w-[13rem] md:w-[18rem] md:bottom-30 md:left-24 lg:w-[21rem] lg:-top-16">
-                    <Image src={MySelf}/>
+                    <Image alt="Picture of Hector" src={MySelf}/>
                 </div>
                 <div className="ml-6 w-[19rem] sm:w-[21rem] md:w-[27.5rem] md:ml-8 md:mt-10 md:mr-6 lg:w-[32rem] lg:mt-2">
-                    <Image src={theme ? theme.image : null}
+                    <Image alt="Rounded and colored image" src={theme ? theme.image : null}
                            className="hover:scale-[96%] hover:transition-transform hover:duration-300"></Image>
                 </div>
             </div>
             <div className="flex flex-col ml-8 -mt-2 md:w-1/2 md:mr-6 md:pt-2">
                 <h1 className="font-Bebas text-5xl mb-2 lg:text-6xl ">Hector Esquerdo </h1>
-                <h1 className="font-Montserrat mb-4 text-4xl lg:text-3xl">Fullstack developer </h1>
+                <h2 className="font-Montserrat mb-4 text-4xl lg:text-3xl">Fullstack developer </h2>
                 <p className="font-Montserrat  leading-8 text-xl md:text-lg md:leading-6 lg:my-4 lg:text-xl">{language.hero}
                 </p>
                 <a
