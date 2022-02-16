@@ -1,8 +1,8 @@
 import {useContext, useEffect, useState} from 'react'
 import {Switch} from '@headlessui/react'
 import Image from 'next/image'
-import darkLogo from '../public/assets/dark-logo.png'
-import lightLogo from '../public/assets/light-logo.png'
+import darkLogo from '../public/assets/logo-dark.png'
+import lightLogo from '../public/assets/logo-light.png'
 import {classNames} from "../utils/utils";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faMoon} from '@fortawesome/free-solid-svg-icons'
@@ -49,9 +49,9 @@ export const Navbar = () => {
                 darkMode ? "text-white" : "text-black")}
             >
             <div className="flex">
-                <div className="mt-3 ml-2 mr-3 scale-[78%] md:mt-4 md:scale-[100%]">
+                <div className="w-36 mt-3 ml-2 mr-3 md:mt-4">
                     <Link href="/" >
-                        <Image alt="HEV projects logo "className="cursor-pointer" src={darkMode ? darkLogo : lightLogo} width={125} height={100}/>
+                        <Image alt="HEV projects logo "className="cursor-pointer" src={darkMode ? darkLogo : lightLogo}/>
                     </Link>
                 </div>
                 <div className={classNames("hidden md:flex inline p-2",
