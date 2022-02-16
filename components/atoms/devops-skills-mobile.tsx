@@ -35,7 +35,7 @@ export const DevopsSkillsMobile = () => {
                 <button
                     aria-label="Push to see DevOps skills"
                     onClick={handleFrontend}
-                    className="bg-dark-third text-white mt-5 rounded-full p-2 animate-pulse"
+                    className="bg-dark-third text-white mt-5 rounded-full p-2"
                 >
                     <p className="font-Montserrat text-md">Push</p>
                 </button>
