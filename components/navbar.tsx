@@ -108,6 +108,7 @@ export const Navbar = () => {
                 {/* LANGUAGE SWITCHER*/}
                 <div className="flex justify-evenly items-center text-sm border-accent-green h-14">
                     <button
+                        aria-label="Spanish language"
                         onClick={() => dispatchLanguage(Language.ESP)}
                         className={classNames("mr-4 mt-1 w-12 h-8 rounded-md shadow-sm",
                             darkMode ? "bg-dark-secondary text-white active:border-2 border-white focus:border-2 border-white" :
@@ -116,6 +117,7 @@ export const Navbar = () => {
                         ESP
                     </button>
                     <button
+                        aria-label="English language"
                         onClick={() => dispatchLanguage(Language.EN)}
                         className={classNames("mt-1 w-12 h-8 rounded-md shadow-sm",
                             darkMode ? "bg-dark-secondary text-white active:border-2 border-white focus:border-2 border-white" :
@@ -128,6 +130,7 @@ export const Navbar = () => {
                 {/* HAMBURGER*/}
                     {
                         !menu ? (<button
+                                aria-label="Hamburger button"
                                 onClick={() => handleMenu()}
                             >
                                 <FontAwesomeIcon
@@ -137,6 +140,7 @@ export const Navbar = () => {
                             </button>
 
                         ) : (<button
+                            aria-label="Hamburger button"
                             onClick={() => handleMenu()}
                         >
                             <FontAwesomeIcon
@@ -147,6 +151,7 @@ export const Navbar = () => {
                     }
                     {/* DARK MODE SWITCHER*/}
                     <button
+                        aria-label="Dark mode switcher"
                         onClick={handleDark}
                         className="mx-4 text-lg h-10 w-6"
                     >
@@ -188,19 +193,19 @@ export const Navbar = () => {
                                                     darkMode ? "bg-dark-secondary text-white" : "bg-light-secondary text-black"
                                                 )}>
                                                 <p className="text-sm">Tema</p>
-                                                <button onClick={() => dispatchTheme(Colors.GREEN)}>
+                                                <button aria-label="Green color" onClick={() => dispatchTheme(Colors.GREEN)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-green  rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => dispatchTheme(Colors.PINK)}>
+                                                <button aria-label="Pink color" onClick={() => dispatchTheme(Colors.PINK)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-pink   rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => dispatchTheme(Colors.RED)}>
+                                                <button aria-label="Red color" onClick={() => dispatchTheme(Colors.RED)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-red  rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
-                                                <button onClick={() => dispatchTheme(Colors.YELLOW)}>
+                                                <button aria-label="Yellow color" onClick={() => dispatchTheme(Colors.YELLOW)}>
                                                     <div
                                                         className="w-8 h-8 bg-accent-yellow   rounded-full hover:border-4 hover:border-white"></div>
                                                 </button>
