@@ -13,7 +13,7 @@ module.exports = {
             backgroundImage: {
                 'Hidreco': "url('/img/hidreco_web.webp')",
                 'Render': "url('/img/render_props_web.webp')",
-                'Blackvil': "url('/img/blackvil_web.webp')",
+                'Blackvil': "url('/img/blackvil_resize_web.webp')",
                 'David': "url('/img/david_esteve_web.webp')",
             },
             colors: {

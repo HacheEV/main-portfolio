@@ -1,5 +1,5 @@
 import MediumGreen from "../public/assets/medium-green.png";
-import MySelf from "../public/assets/personal-2.png";
+import MySelf from "../public/assets/personal-2_web.webp";
 import Image from "next/image";
 import {useContext, useState} from "react";
 import DarkModeContext from "../context/mode-context";
