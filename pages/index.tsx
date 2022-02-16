@@ -42,7 +42,7 @@ const Home: NextPage = () => {
                             <div className="ml-[0.7rem] mb-8 md:mb-12 md:ml-[3.8rem] lg:mb-[4.5rem] lg:ml-[3.6rem]">
                                 <Link href="#top">
 
-                                        <a className="scroll-smooth">
+                                        <a aria-label="Button to go to header" className="scroll-smooth">
                                             <FontAwesomeIcon className={classNames(theme.text , "text-3xl ml-2 sm:text-4xl md:ml-3 lg:ml-5")} icon={faArrowCircleUp} />
                                         </a>
                                 </Link>
