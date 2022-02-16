@@ -14,7 +14,7 @@ module.exports = {
                 'Hidreco': "url('/img/hidreco.png')",
                 'Render': "url('/img/render_props.png')",
                 'Blackvil': "url('/img/blackvil.png')",
-                'David': "url('/img/david_esteve.png')",
+                'David': "url('/img/david_esteve_web.webp')",
             },
             colors: {
                 "white": "#FFFFFF",
