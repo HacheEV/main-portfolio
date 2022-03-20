@@ -11,8 +11,14 @@ const language = {
         contactSecond: "Empieza tu proyecto ahora!",
         contactButton: "Contacto",
         navbar: ["Habilidades", "Trabajos", "Contacto"],
-        contact: ["Nombre", "Apellido", "Correo electrónico", "Razón", "Cuéntame tu idea"],
-        contactSelect: ["Nueva web", "Crear un producto digital", "Transformación digital", "Mejorar mi web", "Consultoría" ]
+        contact: ["Nombre completo", "Teléfono", "Correo electrónico", "Razón", "Cuéntame tu idea"],
+        contactSelect: ["Nueva web", "Crear un producto digital", "Transformación digital", "Mejorar mi web", "Consultoría" ],
+        formMessage: {
+            check: "Formulario enviado correctamente",
+            message: "En breves me pondré en contacto contigo para poner en marcha tu idea!",
+            error: "Algo salió mal",
+            errorMessage: "Lo siento, vuelve a intentarlo más tarde."
+        }
     },
     EN: {
         language: 'ENG',
@@ -23,8 +29,14 @@ const language = {
         contactSecond: "Get start your project now!",
         contactButton: "Contact",
         navbar: ["Skills", "Works", "Contact"],
-        contact: ["First name", "Last name", "Email address", "Reason", "Tell me your idea"],
-        contactSelect: ["New web", "Create a digital product", "Digital transformation", "Upgrade my web", "Consultancy" ]
+        contact: ["Full name", "Phone", "Email address", "Reason", "Tell me your idea"],
+        contactSelect: ["New web", "Create a digital product", "Digital transformation", "Upgrade my web", "Consultancy" ],
+        formMessage: {
+            check: "Form sended successfully!",
+            message: "As soon as possible I will contact you to start your project!",
+            error: "Something went wrong!",
+            errorMessage: "Sorry, try again later please."
+        }
     }
 }
 export const languageInitialState = language.ESP
